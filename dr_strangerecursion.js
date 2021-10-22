@@ -9,7 +9,7 @@ function runProgram(input) {
    
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`10`);
+    runProgram(`3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -29,6 +29,27 @@ function runProgram(input) {
     });
   }
   function subs(N){
- 
+    var arr=[];
+    for(let i =1;i<=N;i++){
+      arr.push(i)
+    }
+   var newarr=[];
+   var curr=0;
+
+    function find(arr,newarr,curr,N){
+      if(newarr.length>=0){
+        console.log(newarr.join(" "))
+      }
+      if(curr==arr.length){
+        return;
+      }
+      for(let i =curr;i<arr.length;i++){
+        newarr.push(arr[i])
+        find(arr,newarr,i+1,N)
+        
+        newarr.pop()
+      }
+    }
+    find(arr,newarr,curr,arr.length)
 
   }
