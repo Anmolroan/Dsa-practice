@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="SEARch" id="search" oninput="debounce(show,2000)">
+    <button >Submit</button>
+<div id="vid"></div>
+</body>
+</html>
+<script>
+    var box=document.getElementById("vid");
+    
+    async function show(){
+        box.innerHTML=null
+        var search=document.getElementById("search").value
+        try{
+            let res= await fetch(` https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${search}&key=AIzaSyB6D4ulj8vEPbNnXUhPESyJrd1JfQQzQSQ&maxResults=12`)
+        let data=   await res.json();
+
+        append(data.items)
+        console.log(data)
+        }
+        catch(err){
+            console.log(err)
+        }
+     
+    }
+    
+     append=(vids)=>{
+   vids.forEach(el => {
+    id=el.id.videoId
+         var div=document.createElement("div")
+        // div.innerHTML=`<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        div.innerHTML=el.snippet.title
+        box.append(div)
+         });
+        
+     }
+     var time_id;
+     function debounce(func,t){
+        if(time_id){
+            clearInterval(time_id)
+        }
+        time_id=setTimeout(function(){
+            func()
+        },t)
+    }
+    
+</script>
