@@ -42,34 +42,55 @@ for(let i =0;i<N;i++){
           var i =l;
           var j=mid+1;
           var ma=[];
-          var count=0;
-          while(count===r){
-              if(a[i]<a[j]){
-                  ma.push(a[i]);
-                  count++
+          var k=l;
+         
+          while(i<=mid&&j<=r){
+              if(a[i]<=a[j]){
+                 ma[k]=a[i]
+                
                   i++
               }
-              if(a[j]<a[i]){
-                  ma.push(a[j]);
+              else{
+                 ma[k]=a[j]
                   j++
-                  count++
+                  
               }
+              k++;
           }
-console.log(ma)
+          if(i>mid){
+            while(j<=r){
+             ma[k]=a[j]
+              j++;
+              k++;
+            }
+          }
+          else{
+            while(i<=mid){
+             ma[k]=a[i]
+              i++;
+              k++;
+            }
+          }
+      for(let i =l;i<=r;i++){
+     a[i]=ma[i]
       }
-      merge(arr,0,3,7)
+
+      }
+  
+      // merge(arr,0,5,7);
+      // console.log(arr)
       
-    // mregeSort=(a,l,r)=>{
-    //     if(l<r){
-    //         var mid =Math.floor((l+r)/2);
-    //         mregeSort(a,l,mid)
-    //         mregeSort(a,mid+1,r)
-    //         merge(a,l,mid,r)
-    //     }
-    //     else{
-    //         return;
-    //     }
-    // }
-    // mregeSort(arr,0,N-1);
-    // console.l(arr)
+    mregeSort=(a,l,r)=>{
+        if(l<r){
+            var mid =Math.floor((l+r)/2);
+            mregeSort(a,l,mid)
+            mregeSort(a,mid+1,r)
+            merge(a,l,mid,r)
+        }
+        else{
+            return;
+        }
+    }
+    mregeSort(arr,0,N-1);
+    console.log(arr)
   }
