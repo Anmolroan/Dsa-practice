@@ -48,6 +48,8 @@ for(let i=0;i<9;i++){
         return false
     }
 }
+var r=r-r%3;
+var c=c-c%3
 for(let i =0;i<3;i++){
 for(let j =0;j<3;j++){
     if(sudoku[r+i][c+j]==n){
@@ -59,37 +61,58 @@ return true;
       }
 
       var flag=false;
+      var arr=[];
       function solve(r,c){
-        if(r==sudoku.length){
-            console.log(sudoku);
+        if(r==8&&c==9){
+           flag =true;
            
-            return ;
+          //  console.log(sudoku);
+           for(let i =0;i<sudoku.length;i++){
+             var temp=sudoku[i].join(" ");
+             arr.push(temp)
+           }
+            return 
         }
-        
-          if(c==8){
-             r=r+1;
-             c=0;
-          }
-          else{
-              r=r;
-              c=c+1;
-          }
+        if(c==sudoku.length){
+            r=r+1;
+            c=0;
+        }
+         
         
          if(sudoku[r][c]!=0){
-             solve(r,c)
-         }else{
-             for(let i =1;i<=9;i++){
+              solve(r,c+1)
+         }
+            else{
+              for(let i =1;i<10;i++){
                 if(check(r,c,i)==true){
                     sudoku[r][c]=i;
-                    solve(r,c);
-                    // sudoku[r][c]=0;
-                }
-             }
+                    solve(r,c+1)
+                      sudoku[r][c]=0;
+                    }
+                    
+                    }
+            } 
+                   
+
+                  
+                   
+                
+             
             
-         }
-         return ;
+         
+         return 
       }
-      solve(0,-1);
-      console.log(sudoku)
-    //  console.log
+      solve(0,0);
+      if(flag==true){
+        
+        for(let i =0;i<arr.length;i++){
+          console.log(arr[i])
+        }
+      }
+      else{
+        console.log(-1)
+      }
+       
+    
+      
   }
