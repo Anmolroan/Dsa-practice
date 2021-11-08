@@ -471,3 +471,569 @@
  
 // console.log(middle(0,N-1,newstr))
 //   }
+// day 2 Q no 1 Dr. Strange and Possibilities II
+// function runProgram(input) {
+//     // Write code here
+//     input=input.trim().split("\n")
+//     var n=+input[0];
+//     var arr=input[1].trim().split(" ").map(Number);
+//     main(n,arr)
+   
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`3
+//     1 2 2`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
+// function  main(n,arr){
+//     var newarr=[]
+//     function strange(curr,newarr){
+//         if(newarr.length>=0){
+//             console.log(newarr)
+//         }
+//         if(curr==n){
+//             return
+//         }
+//         for(let i =curr;i<n;i++){
+//             newarr.push(arr[i]);
+//             strange(i+1,newarr);
+//             newarr.pop()
+//         }
+//     }
+//     strange(0,newarr)
+// }
+// left some part
+// Q no 2 D2
+// function runProgram(input) {
+//     // Write code here
+//     input=input.trim().split("\n");
+//     var N=+input[0];
+//     var arr1=input[1].trim().split(" ").map(Number);
+//     var arr2=input[2].trim().split(" ").map(Number);
+// main(arr1,arr2,N)
+   
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`4
+//     1 5 7 9
+//     2 4 6 8`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
+//   function main(arr1,arr2,N){
+//     var arr=arr1.concat(arr2);
+//     console.log(arr);
+//     var N=arr.length;
+//     function merge(l,mid,r){
+// var i =l;
+// var j =mid+1;
+// var k=l;
+// var temp=[]
+// while(i<=mid&&j<=r){
+//     if(arr[i]<=arr[j]){
+//         temp[k]=arr[i];
+//         i++;
+//         k++;
+//     }
+//   else{
+//       temp[k]=arr[j];
+//       j++;
+//       k++;
+//   }
+// }
+// if(i<=mid){
+//     while(i<=mid){
+//         temp[k]=arr[i];
+//         i++;
+//         k++;
+//     }
+// }
+// else{
+//     while(j<=r){
+//         temp[k]=arr[j];
+//         j++;
+//         k++;
+//     }
+// }
+
+// for(let i =l;i<=r;i++){
+//     arr[i]=temp[i]
+// }
+//     }
+//     function mergeSort(l,r){
+//         if(l<r){
+//             var mid =Math.floor((l+r)/2);
+//             mergeSort(l,mid);
+//             mergeSort(mid+1,r);
+//             merge(l,mid,r)
+//         }
+//         else{
+//             return
+//         }
+//     }
+//     mergeSort(0,N-1);
+//     console.log(arr.join(" "))
+//   }
+// Q no 3 D2 Quickly Sort it
+// function runProgram(input) {
+//     // Write code here;
+//     input=input.trim().split("\n")
+//        var N =+input[0];
+//         var arr=input[1].trim().split(" ").map(Number);
+//      main(N,arr)
+   
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`5
+//     3 5 0 9 8`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
+//   function main(N,arr){
+//       swap=(i,j)=>{
+//         var temp=arr[i];
+//         arr[i]=arr[j];
+//         arr[j]=temp
+//       }
+//       function partition(l,h){
+//           var pivot=arr[l];
+//           var i =l;
+//           var j =h;
+//           while(i<j){
+
+//               while(arr[i]<=pivot){
+//                   i++;
+//               }
+//               while(arr[j]>pivot){
+//                   j--;
+//               }
+//               if(i<j){
+//                 swap(i,j)
+//             }
+//           } 
+//           swap(j,l)
+//           return j;
+         
+//       }
+//       function quickSort(l,h){
+//           if(l<h){
+//               var pivot=partition(l,h);
+//               quickSort(l,pivot-1);
+//               quickSort(pivot+1,h)
+//           }
+//       }
+//       quickSort(0,N-1);
+//       console.log(arr.join(" "))
+//   }
+// Q no 4 Generate Permutations;
+// function runProgram(input) {
+//     // Write code here;
+//     input=input.trim().split("\n")
+//        var N =+input[0];
+//         var arr=input[1].trim().split(" ").map(Number);
+//    main(N,arr)
+   
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`3
+//     1 2 3`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   } 
+//   function main(N,arr){
+//     swap=(i,j)=>{
+//                 var temp=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=temp
+//               }
+//       function permute(curr){
+//           if(curr==N){
+//               console.log(arr);
+//               return
+//           }
+//           for(let i =curr;i<N;i++){
+//               swap(i,curr);
+//               permute(curr+1);
+//               swap(i,curr)
+//           }
+//       }
+//     //   permute(0)
+//   }
+// function runProgram(input) {
+//         // Write code here;
+//         input=input.trim().split("\n")
+//            var N =+input[0];
+//             var arr=input[1].trim().split(" ").map(Number);
+//          main(N,arr)
+       
+//       }
+//       if (process.env.USER=== "anmolkumar") {
+//         runProgram(`5
+//         3 5 0 9 8`);
+//       } else {
+//         process.stdin.resume();
+//         process.stdin.setEncoding("ascii");
+//         let read = "";
+//         process.stdin.on("data", function (input) {
+//           read += input;
+//         });
+//         process.stdin.on("end", function () {
+//           read = read.replace(/\n$/, "");
+//           read = read.replace(/\n$/, "");
+//           runProgram(read);
+//         });
+//         process.on("SIGINT", function () {
+//           read = read.replace(/\n$/, "");
+//           runProgram(read);
+//           process.exit(0) ;
+//         });
+//       }
+    //   function main(N,arr){
+    //       function mergeSort(l,r){
+    //           if(l<r){
+    //               var mid=Math.floor((l+r)/2);
+    //               mergeSort(l,mid);
+    //               mergeSort(mid+1,r)
+    //               merge(l,mid,r)
+    //           }
+    //           else{
+    //               return
+    //           }
+    //       }
+    //       function merge(l,mid,r){
+    //           var i=l;
+    //           var j=mid+1;
+    //           var k=l;
+    //           var temp=[]
+    //           while(i<=mid&&j<=r){
+    //               if(arr[i]<=arr[j]){
+    //                 temp[k]=arr[i];
+    //                 i++;
+    //                 k++;
+    //               }
+    //               else{
+    //                   temp[k]=arr[j];
+    //                   j++;
+    //                   k++;
+    //               }
+    //           }
+    //           if(j<=r){
+    //               while(j<=r){
+    //                   temp[k]=arr[j];
+    //                   j++;
+    //                   k++;
+    //               }
+    //           }
+    //           else{
+    //             while(i<=mid){
+    //                 temp[k]=arr[i];
+    //                 i++;
+    //                 k++;
+    //             }
+    //           }
+    //           for(let i =l;i<=r;i++){
+    //               arr[i]=temp[i]
+    //           }
+    //       }
+    //       mergeSort(0,N-1);
+    //       console.log(arr)
+    //   }
+    // function runProgram(input) {
+    //     // Write code here;
+    //     input=input.trim().split("\n")
+    //        var N =+input[0];
+    //         var arr=input[1].trim().split(" ").map(Number);
+    //      main(N,arr)
+       
+    //   }
+    //   if (process.env.USER=== "anmolkumar") {
+    //     runProgram(`5
+    //     3 5 0 9 8`);
+    //   } else {
+    //     process.stdin.resume();
+    //     process.stdin.setEncoding("ascii");
+    //     let read = "";
+    //     process.stdin.on("data", function (input) {
+    //       read += input;
+    //     });
+    //     process.stdin.on("end", function () {
+    //       read = read.replace(/\n$/, "");
+    //       read = read.replace(/\n$/, "");
+    //       runProgram(read);
+    //     });
+    //     process.on("SIGINT", function () {
+    //       read = read.replace(/\n$/, "");
+    //       runProgram(read);
+    //       process.exit(0) ;
+    //     });
+    //   }
+    //   function  main(N,arr){
+    //     swap=(i,j)=>{  
+    //         var temp=arr[i];
+    //         arr[i]=arr[j];
+    //           arr[j]=temp }
+    //       function partition(l,h){
+    //           var pivot=arr[l];
+    //           var i=l;
+    //           var j=h;
+    //           while(i<j){
+    //               while(arr[i]<=pivot){
+    //                   i++;
+                      
+    //               }
+    //               while(arr[j]>pivot){
+    //                   j--;
+    //                 }
+    //                 if(i<j){
+    //                     swap(i,j)
+    //                 }
+    //           }
+    //           swap(j,l);
+    //           return j
+
+    //       }
+    //       function quickSort(l,h){
+    //           if(l<h){
+    //               var pivot=partition(l,h);
+    //               quickSort(l,pivot-1);
+    //               quickSort(pivot+1,h)
+    //           }
+             
+    //       }
+    //       quickSort(0,N-1);
+    //       console.log(arr)
+    //   }
+  // function runProgram(input) {
+  //       // Write code here;
+  //       input=input.trim().split("\n")
+  //          var N =+input[0];
+  //           var arr=input[1].trim().split(" ").map(Number);
+  //       main(N,arr)
+       
+  //     }
+  //     if (process.env.USER=== "anmolkumar") {
+  //       runProgram(`5
+  //       2 3 1 4 5`);
+  //     } else {
+  //       process.stdin.resume();
+  //       process.stdin.setEncoding("ascii");
+  //       let read = "";
+  //       process.stdin.on("data", function (input) {
+  //         read += input;
+  //       });
+  //       process.stdin.on("end", function () {
+  //         read = read.replace(/\n$/, "");
+  //         read = read.replace(/\n$/, "");
+  //         runProgram(read);
+  //       });
+  //       process.on("SIGINT", function () {
+  //         read = read.replace(/\n$/, "");
+  //         runProgram(read);
+  //         process.exit(0) ;
+  //       });
+  //     }
+  //     function main(N,arr){
+  //       function swap(i,j){
+  //         var temp=arr[i];
+  //         arr[i]=arr[j];
+  //         arr[j]=temp;
+  //       }
+  //       function merge(l,mid,r){
+  //         var i =l;
+  //         var j=mid+1;
+  //         var k=l;
+  //         var temp=[];
+  //         while(i<=mid&&j<=r){
+  //           if(arr[i]>arr[j]){
+  //             temp[k]=arr[i];
+  //             i++;
+  //             k++
+  //           }
+  //           else{
+  //             temp[k]=arr[j]
+  //             j++;
+  //             k++;
+  //           }
+  //         }
+  //         if(i<=mid){
+  //           while(i<=mid){
+  //             temp[k]=arr[i];
+  //             i++;
+  //             k++;
+  //           }
+  //         }
+  //         else{
+  //           while(j<=r){
+  //             temp[k]=arr[j];
+  //             j++;
+  //             k++;
+  //           }
+  //         }
+  //         for(let i =l;i<=r;i++){
+  //           arr[i]=temp[i]
+  //         }
+  //       }
+  //       function mergeSort(l,r){
+  //         if(l<r){
+  //           var mid=Math.floor((l+r)/2);
+  //           mergeSort(l,mid);
+  //           mergeSort(mid+1,r);
+  //           merge(l,mid,r)
+  //         }
+  //       }
+  //       mergeSort(0,N-1);
+  //       console.log(arr.join(" "))
+  //     }
+
+
+  //  function runProgram(input) {
+  //       // Write code here;
+  //       input=input.trim().split("\n")
+  //          var N =+input[0];
+  //           var arr=input[1].trim().split(" ").map(Number);
+  //       main(N,arr)
+       
+  //     }
+  //     if (process.env.USER=== "anmolkumar") {
+  //       runProgram(`5
+  //       1 2 3 4 5`);
+  //     } else {
+  //       process.stdin.resume();
+  //       process.stdin.setEncoding("ascii");
+  //       let read = "";
+  //       process.stdin.on("data", function (input) {
+  //         read += input;
+  //       });
+  //       process.stdin.on("end", function () {
+  //         read = read.replace(/\n$/, "");
+  //         read = read.replace(/\n$/, "");
+  //         runProgram(read);
+  //       });
+  //       process.on("SIGINT", function () {
+  //         read = read.replace(/\n$/, "");
+  //         runProgram(read);
+  //         process.exit(0) ;
+  //       });
+  //     }
+  //     function  main(N,arr){
+  //       var even=0;
+  //       var Odd=0;
+  //       for(let i =0;i<N;i++){
+  //         if(arr[i]%2!=0){
+  //           Odd=Odd+arr[i]
+  //         }
+  //         else{
+  //           even=even+arr[i]
+  //         }
+  //       }
+  //       console.log(2*even+3*Odd)
+  //     }
+  function runProgram(input) {
+      // Write code here;
+      var [N,K]=input.trim().split(" ").map(Number);
+      main(N,K)
+     
+    }
+    if (process.env.USER=== "anmolkumar") {
+      runProgram(`4 2`);
+    } else {
+      process.stdin.resume();
+      process.stdin.setEncoding("ascii");
+      let read = "";
+      process.stdin.on("data", function (input) {
+        read += input;
+      });
+      process.stdin.on("end", function () {
+        read = read.replace(/\n$/, "");
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+      });
+      process.on("SIGINT", function () {
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+        process.exit(0) ;
+      });
+    }
+     function main(N,K){
+       var arr=[];
+       for(let i =1;i<=N;i++){
+         arr.push(i);
+       }
+       var newarr=[]
+      //  console.log(arr)
+      function shopping(curr,newarr){
+        if(newarr.length==K){
+          console.log(newarr.join(" "))
+        }
+        if(curr==arr.length){
+          return
+        }
+        for(let i =curr;i<arr.length;i++){
+          newarr.push(arr[i]);
+          shopping(i+1,newarr);
+          newarr.pop();
+        }
+      }
+shopping(0,newarr)
+     }
