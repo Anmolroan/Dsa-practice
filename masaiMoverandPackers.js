@@ -30,7 +30,7 @@ function main(K,N,arr){
     let count=0;
 pAm=function(weight,arr,cur,newarr){
 if(weight==0){;
-  // console.log(newarr)
+  console.log(newarr)
   count++
   
 }
