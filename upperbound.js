@@ -6,8 +6,8 @@ function runProgram(input) {
    binary(N,k,arr)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`5 2
-    1 1 2 2 5`);
+    runProgram(`10 3
+    0 2 4 4 5 5 7 7 9 10`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -34,8 +34,8 @@ function runProgram(input) {
       var arr=arr.sort((a,b)=>a-b);
 
 while(i<j){
-var  mid = i + (j - i) / 2
-
+var  mid = i + Math.floor((j - i) / 2)
+// var mid=Math.floor((i+j)/2)
 
  if(arr[mid]<=k){
     i=mid+1;
@@ -44,8 +44,15 @@ else {
     j=mid
 }
 }
-if(i< N-1 && arr[i] <= i) {
-    i++;
- }
-console.log(i)
+// if(i< N-1 && arr[i] <= i) {
+//     i++;
+//  }
+
+  if(arr[i]>k){
+    console.log(i)
+  }else{
+    console.log(-1)
+  }
+
+
   }
