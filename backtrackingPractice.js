@@ -1168,60 +1168,271 @@
 //     });
 //   }
 // 
+// function runProgram(input) {
+//     // Write code here
+//     input=input.trim().split("\n")
+//         var test=+input[0];
+//         var line=1;
+//         for(let i =0;i<test;i++){
+//           var N=+input[line++]
+//           var arr=input[line++].trim().split("").map(Number);
+//           occur(N,arr)
+//         }
+        
+        
+   
+//   }
+//   function occur(N,arr){
+//     arr.sort((a,b)=>a-b);
+  
+//     var obj={};
+//     for(let i =0;i<N;i++){
+//       var char=arr[i];
+//       if(obj[char]===undefined){
+//         obj[char]=1;
+//       }
+//       else{
+//         obj[char]=obj[char]+1;
+//       }
+//     }
+
+//     var ans=[];
+//     for(let i =0;i<10;i++){
+//       ans[i]=0;
+//     }
+    
+//     for(let i=0;i<10;i++){
+//       var count=0
+//       for(k in obj){
+//         if(i==k){
+//           ans[i]=obj[k]
+//         }
+//       }
+//     }
+//     console.log(ans.reverse().join(" "))
+   
+     
+     
+    
+   
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`2
+//     5
+//     21321
+//     6
+//     235452`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
+// function runProgram(input) {
+//     // Write code here
+//    input = input.trim().split("\n");
+//    let N= +input[0];
+//    let arr =input[1].trim().split(" ").map(Number);
+//    main(N,arr)
+//   }
+//   function main(N,arr){
+
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`5
+//     3 5 0 9 8`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
+// function runProgram(input) {
+//     // Write code here
+//    var string=input.trim();
+//    Unique(string)
+//   }
+//   function Unique(string){
+//     var obj ={}
+//     for(let i =0;i<string.length;i++){
+// var char=string[i];
+// if(obj[char]==undefined){
+//   obj[char]=1;
+// }
+// else{
+//   obj[char]=obj[char]+1;
+// }
+//     }
+//     console.log(obj);
+//     var count=0;
+//     for(key in obj){
+//       if(obj[key]>1){
+//         count++;
+//         break;
+//       }
+//     }
+//     if(count==0){
+//       console.log("Unique")
+//     }
+//     else{
+//       console.log("No")
+//     }
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`masai`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
+// function runProgram(input) {
+//     // Write code here
+//     input=input.trim().split("\n");
+//     let N =+input[0];
+//     var line=1;
+//     let soilders=[]
+//     for(let i =0;i<N;i++){
+// soilders.push(+input[line++])
+//     }
+//     soilders.sort((a,b)=>a-b)
+//    var q=+input[line++];
+//    var Q=[];
+//    for(let i = 0;i<q;i++){
+//      Q.push(+input[line++])
+//    }
+//   //  console.log(soilders,Q)
+//    Powers(N,soilders,Q)
+//   }
+//   function  Powers(N,soilders,Q){
+//     // console.log(soilders)
+//     for(let l=0;l<Q.length;l++){
+// var K =Q[l];
+
+// var total =0;
+// var sum=0;
+//  for(let  i= 0;i<soilders.length;i++){
+//    if(soilders[i]<=K){
+//      sum=sum+soilders[i];
+//      total=total+1
+//    }
+//    else{break;}
+   
+//  }
+// console.log(total + " "+sum)
+//     }
+//   }
+//   if (process.env.USER=== "anmolkumar") {
+//     runProgram(`7
+//     1 
+//     2 
+//     3 
+//     4
+//     5 
+//     6 
+//     7
+//     3
+//     3
+//     10
+//     2`);
+//   } else {
+//     process.stdin.resume();
+//     process.stdin.setEncoding("ascii");
+//     let read = "";
+//     process.stdin.on("data", function (input) {
+//       read += input;
+//     });
+//     process.stdin.on("end", function () {
+//       read = read.replace(/\n$/, "");
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//     });
+//     process.on("SIGINT", function () {
+//       read = read.replace(/\n$/, "");
+//       runProgram(read);
+//       process.exit(0) ;
+//     });
+//   }
 function runProgram(input) {
     // Write code here
-    input=input.trim().split("\n")
-        var test=+input[0];
-        var line=1;
-        for(let i =0;i<test;i++){
-          var N=+input[line++]
-          var arr=input[line++].trim().split("").map(Number);
-          occur(N,arr)
-        }
-        
-        
-   
+    input=input.trim().split("\n");
+    var N =+input[0];
+    var arr =input[1].trim().split(" ").map(Number);
+    arr.sort((a,b)=>a-b)
+    var query =+input[2];
+    var Q=[];
+    for(let i =3;i<3+query;i++){
+      var char=input[i].trim().split(" ").map(Number);
+      Q.push(char)
+    }
+   nikhil(Q,N,arr)
   }
-  function occur(N,arr){
-    arr.sort((a,b)=>a-b);
-  
-    var obj={};
-    for(let i =0;i<N;i++){
-      var char=arr[i];
-      if(obj[char]===undefined){
-        obj[char]=1;
-      }
-      else{
-        obj[char]=obj[char]+1;
-      }
-    }
-
-    var ans=[];
-    for(let i =0;i<10;i++){
-      ans[i]=0;
-    }
+  function nikhil(Q,N,arr){
     
-    for(let i=0;i<10;i++){
-      var count=0
-      for(k in obj){
-        if(i==k){
-          ans[i]=obj[k]
+      for(let j =0;j<Q.length;j++){
+        var count=0;
+        var count2=0
+        for(let i =0;i<N;i++){
+          if(arr[i]>=Q[j][1]){
+            count++;
+          }
+          if(arr[i]>Q[j][1]){
+            count2++;
+          }
         }
+        if(Q[j][0]==0){console.log(count)}
+        else{
+          console.log(count2)
+        }
+       
       }
-    }
-    console.log(ans.reverse().join(" "))
-   
-     
      
     
-   
   }
+   
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    5
-    21321
-    6
-    235452`);
+    runProgram(`4
+    1 2 3 4
+    3
+    0 5
+    1 3
+    0 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

@@ -11,34 +11,38 @@ function runProgram(input) {
   }
   function curve(A,B,C,K){;
     let result=-1;
-    var i=1;
+    var i=0;
     var j=K;
+    
       while(i<=j){
         let mid=i+Math.floor((j-i)/2)
           var Xo=mid;
+          console.log(mid)
           var equation=(A *(Xo**2)) + (B* Xo) + C ;
-        //   console.log(Xo)
-        //   console.log(equation)
+          console.log(Xo)
+          console.log(equation)
         
           if(equation> K){
-              var de=(A *(Xo**2))+ (B* Xo) + C;
+         
               
               result=Xo;
               j=mid-1;
           }
           else if(equation <= K){
-              i=mid;
+            if(equation===K){
+              result=Xo
+            }
+
+              i=mid+1;
           }
          
-          if(i==j){
-              break
-          }
+       
       }
       console.log(result)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1 
-    9 79 36 16`);
+    runProgram(`1
+    2 7 6 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
