@@ -1,13 +1,40 @@
 function runProgram(input) {
     // Write code here
     input=input.trim().split("\n");
-    var [N,k]=input[0].trim().split(" ").map(Number);
+    var [N,C,R]=input[0].trim().split(" ").map(Number);
     var arr=input[1].trim().split(" ").map(Number)
-   binary(N,k,arr)
+   party(N,C,R,arr)
+  }
+  function  party(N,C,R,arr){
+      var sum=0;
+      var count=0;
+      var result=0;
+      for(let i =0;i<N;i++){
+          sum=sum+arr[i];
+          count=count+1;
+
+ if(sum<=R&&count==C){
+    result++
+  
+}
+else if(sum>R){
+    sum=sum-arr[i];
+    count=count-1;
+}
+// console.log(count)
+// console.log(sum)
+      }
+      if(result==0){
+          console.log("Sad")
+      }
+      else{
+        console.log("Party")
+      }
+      
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`6 1
-    1 1 1 2 2 2`);
+    runProgram(`5 3 24
+    6 4 21 20 13`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -25,31 +52,4 @@ function runProgram(input) {
       runProgram(read);
       process.exit(0) ;
     });
-  }
-  function binary(N,k,arr){
-     
-      var i=0;
-      var j=N-1;
- var count=0;
-      var arr=arr.sort((a,b)=>a-b);
-var lowerbound=-1;
-while(i<=j){
-  if(i==j){
-    break;
-  }
-var mid=Math.floor((i+j)/2);
-
-
- if(arr[mid]>=k){
-   if(arr[mid]===k){
-    lowerbound=mid;
-   }
-    j=mid;
-}
-else if(arr[mid]<k){
-    i= mid+1;
-}
-}
-console.log(lowerbound)
-
   }

@@ -11,29 +11,27 @@ function runProgram(input) {
   }
   function curve(A,B,C,K){;
     let result=-1;
-    var i=0;
+    var i=1;
     var j=K;
     
       while(i<=j){
         let mid=i+Math.floor((j-i)/2)
           var Xo=mid;
-          console.log(mid)
+          // console.log(mid)
           var equation=(A *(Xo**2)) + (B* Xo) + C ;
-          console.log(Xo)
-          console.log(equation)
+          // console.log(Xo)
+          // console.log(equation)
         
-          if(equation> K){
+          if(equation<K){
          
               
               result=Xo;
-              j=mid-1;
-          }
-          else if(equation <= K){
-            if(equation===K){
-              result=Xo
-            }
-
               i=mid+1;
+          }
+          else if(equation >= K){
+          
+
+              j=mid-1;
           }
          
        
@@ -42,7 +40,7 @@ function runProgram(input) {
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`1
-    2 7 6 3`);
+    3 2 4 15`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

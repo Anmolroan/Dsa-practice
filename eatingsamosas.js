@@ -1,35 +1,37 @@
 function runProgram(input) {
     // Write code here
-   input=input.trim().split("\n");
-   var N=+input[0];
-   var arr=input[1].trim().split(" ").map(Number);
-   minimum(N,arr)
+    input=input.trim().split("\n");
+    var [N,K]=input[0].trim().split(" ").map(Number);
+    var arr=input[1].trim().split(" ").map(Number);
+    arr.sort((a,b)=>a-b)
+   samosa(N,K,arr)
   }
-  function minimum(N,arr){
-    let i =0;
-    let j =N-1;
-    var min=null;
-    while(i<=j){
-      
-      let mid =i+Math.floor((j-i)/2);
-      if(arr[mid]>arr[i]&&arr[mid]<arr[j]){
-        min=arr[i];
-break;
-      }
-      else if(arr[mid]<arr[i]&&arr[mid]<arr[j]){
-        j=mid;
-      }
-else{
-  i=mid
+  function  samosa(N,K,arr){
+    var sum=0;
+    var count=0;
+ 
+   var result=0;
+    for(let i =0;i<N;i++){
+        sum=sum+arr[i];
+        count=count+1;
+
+if(sum==K){
+  result++;
+  break;
 }
-    
+else if(sum>K){
+  sum=sum-arr[i];
+  count=count-1;
+}
+
+
     }
-console.log(min)
+    console.log(count)
     
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`10
-    7 8 11 12 13 14 2 3 4 5`);
+    runProgram(`4 10
+    5 4 2 4`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
