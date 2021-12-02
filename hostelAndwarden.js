@@ -1,13 +1,27 @@
 function runProgram(input) {
     // Write code here
-    input=input.trim().split("\n");
-    var [N,k]=input[0].trim().split(" ").map(Number);
-    var arr=input[1].trim().split(" ").map(Number)
-   binary(N,k,arr)
+    input =input.trim().split("\n");
+    var N =+input[0]
+   let arr1 =input[1].trim().split(" ").map(Number);
+   arr1.sort((a,b)=>a-b)
+   let arr2 =input[2].trim().split(" ").map(Number);
+   arr2.sort((a,b)=>a-b)
+   hostel(arr1,arr2,N)
+  }
+  function hostel(arr1,arr2,N){
+      var max=null;
+for(let i =0;i<N;i++){
+    let result =Math.abs(arr2[i]-arr1[i])
+    if(max==null||result>max){
+        max=result
+    }
+}
+console.log(max)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`6 1
-    1 1 1 2 2 2`);
+    runProgram(`3
+    4 -4 2
+    4 0 5`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -25,31 +39,4 @@ function runProgram(input) {
       runProgram(read);
       process.exit(0) ;
     });
-  }
-  function binary(N,k,arr){
-     
-      var i=0;
-      var j=N-1;
-//  var count=0;
-      var arr=arr.sort((a,b)=>a-b);
-var lowerbound=-1;
-while(i<=j){
-  if(i==j){
-    break;
-  }
-var mid=Math.floor((i+j)/2);
-
-
- if(arr[mid]>=k){
-   if(arr[mid]===k){
-    lowerbound=mid;
-   }
-    j=mid;
-}
-else if(arr[mid]<k){
-    i= mid+1;
-}
-}
-console.log(lowerbound)
-
   }
