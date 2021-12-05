@@ -8,49 +8,42 @@ function runProgram(input) {
    steal(N,value,weight,capicity)
   }
   function steal(N,value,weight,capicity){
-      actualvalue =[];
-      function swap (i,j,arr){
-          var temp =arr[i];
-          arr[i]=arr[j];
-          arr[j]=temp
-      }
-      for(let i =0;i<N;i++){
-         
-          var temp = value[i]/weight[i];
-          actualvalue.push(temp)
-      }
-    //   console.log(actualvalue);
-      for(let i =0;i<N;i++){
-          for(let j =0;j<N-1-i;j++){
-              if(actualvalue[j]>actualvalue[j+1]){
-                  swap(j,j+1,actualvalue);
-                  swap(j,j+1,value);
-                  swap(j,j+1,weight)
-              }
-          }
-      };
-      var sum =0;
-    
-      for(let i =N-1;i>=0;i--){
-          if(capicity==0){
-              break;
-          }
-        if(capicity>=weight[i]){
-            sum=sum+(actualvalue[i]*weight[i]);
-            capicity =capicity-weight[i]
-        }else{
-            sum=sum+(actualvalue[i]*capicity);
-            capicity =capicity-capicity
-        }
-      }
-    //   console.log(actualvalue,value,weight);
+    function swap(i,j,arr){
+      let temp = arr[i];
+      arr[i]=arr[j];
+      arr[j]=temp;
+    }
+   for(let i =0;i<N;i++){
+     for(let j =0;j<N-1-i;j++){
+if(value[j]/weight[j]>value[j+1]/weight[j+1]){
+  swap(j,j+1,weight);
+  swap(j,j+1,value)
+}
+     }
+   }
+ 
+let sum =0;
+
+for(let i =value.length-1;i>=0;i--){
+if(capicity===0){
+  break;
+}
+if(capicity>=weight[i]){
+  sum=sum+value[i];
+  capicity=capicity-weight[i]
+}
+else if(capicity<weight[i]){
+  sum =sum+capicity*(value[i]/weight[i]);
+  capicity=0;
+}
+}
 console.log(Math.round(sum))
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`17000
-    20
-    36 83 69 41 64 26 44 45 94 48 61 71 77 66 1 19 28 6 39 98
-    5717 2118 1938 690 4653 5646 9767 657 9826 3738 4558 1966 3059 1277 902 5277 3135 1820 1189 3517`);
+    runProgram(`50 
+    3
+    60 100 120 
+    10 20 30`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

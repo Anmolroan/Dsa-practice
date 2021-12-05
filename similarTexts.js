@@ -3,54 +3,67 @@ function runProgram(input) {
    input= input.trim().split("\n");
    let string1 =input[0].trim();
    let string2 =input[1].trim();
-   findSimilar(string1,string2)
+   findSimilar(string1,string2);
+
+
   }
   function findSimilar(string1,string2){
-      var obj ={};
-      for(let i =0;i<string1.length;i++){
-          var char =string1[i];
-          if(obj[char]===undefined){
-              obj[char]=1;
-          }
-        //   else{
-        //       obj[char]=obj[char]+1
-        //   }
-      }
-      console.log(obj);
-      var obj1 ={};
-      for(let i =0;i<string2.length;i++){
-          var char =string2[i];
-          if(obj1[char]===undefined){
-              obj1[char]=1;
-          }
-        // else{
-        //       obj1[char]=obj1[char]+1
-        //   }
-      }
-      console.log(obj1);
-      var sum=0;
-      var arr1 =[];
-      arr2 =[]
-      for(key in obj){
-        arr1.push(key)
-      }
-      for(key in obj1){
-        arr2.push(key)
-      }
-    console.log(arr1);
-    console.log(arr2);
-    for(let i =0;i<arr1.length;i++){
-        for(let j =i;j<arr2.length;j++){
-            if(arr1[i]==arr2[j]){
-                sum++;
-            }
-        }
-    }
-    console.log(sum)
+     let obj ={};
+     let newarr=[];
+     var arr=string1.split("");
+     let curr=0;
+     function subs(arr,newarr,curr){
+       if(newarr.length>0){
+         var str =newarr.join("")
+         obj[str]=1;
+        
+       }if(curr==arr.length){
+         return
+       }
+       for(let i =curr;i<arr.length;i++){
+         newarr.push(arr[i])
+         subs(arr,newarr,i+1);
+         newarr.pop();
+       }
+     }
+subs(arr,newarr,curr);
+// console.log(obj)
+// second string
+
+let newarr1=[];
+
+var arr=string2.split("");
+let curr1=0;
+let obj1={}
+var max =null;
+var maximum =null;
+function subst(arr,newarr1,curr1){
+  if(newarr1.length>0){
+    var str =newarr1.join("");
+    obj1[str]=1
+if(obj[str]!=undefined){
+if(max==null||max<str.length){
+  max =str.length;
+  maximum=str
+}
+}
+
+  }if(curr1==arr.length){
+    return
+  }
+  for(let i =curr1;i<arr.length;i++){
+    newarr1.push(arr[i])
+    subst(arr,newarr1,i+1);
+    newarr1.pop();
+  }
+}
+subst(arr,newarr1,curr1);
+console.log(max)
+
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`eziowiomkvrrdzx
-    orugiebaolddavd`);
+    runProgram(`AGGTAB
+    GXTXAYB`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
