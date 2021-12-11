@@ -15,63 +15,26 @@ matrix.push(temp);
 
   }
   function spring(matrix,h,w){
-     
-      function check(i,j,matrix){
-         var arr =[];
-        arr[0]=-Infinity;
-        let flag;
-         if(j!=w-1){
-             if(arr[0]<matrix[i][j+1]){
-                 arr[0]=matrix[i][j+1];
-                 flag="side"
-             }
-         }
-         if(i!=h-1){
-             if(arr[0]<matrix[i+1][j]){
-                 arr[0]=matrix[i+1][j];
-                 flag ="down"
-             }
-         }
-         if(i!==h-1||j!==w-1){
-             if(arr[0]<matrix[i+1][j+1]){
-                 arr[0]=matrix[i+1][j+1];
-                 flag="right"
-             }
-         }
-         if(i!=0||j!=0){
-             if(arr[0]<matrix[i+1][j-1]){
-                 arr[0]=matrix[i-1][j-1];
-                 flag ="left";
-             }
-         }
-         return flag;
-      }
-      console.log(check(0,0,matrix));
-      var i =0;
-      var j=0;
-      var out =0;
-      while(i<=h||j<w){
-if(check(i,j,matrix)=="down"){
-    i=i+1;
-    out=out+matrix[i][j]
+      var result =matrix[0]
+   for(i =1;i<h;i++){
+let temp=[];
+for(let j =0;j<w;j++){
+    if(j==0){
+        temp.push(matrix[i][j]+Math.max(result[j],result[1]));
+    }
+    else if(j==w-1){
+        temp.push(matrix[i][j]+Math.max(result[j],result[j-1]));
+    }else{
+        temp.push(matrix[i][j]+Math.max(result[j],result[j-1],result[j+1]));
+    }
+}
+result=temp;
 
-}
-if(check(i,j,matrix)=="side"){
-    j=j+1;
-    out =out+matrix[i][j]
-}
-if(check(i,j,matrix)=="left"){
-    i=i+1;
-    j=j-1;
-    out=out+matrix[i][j]
-}
-if(check(i,j,matrix)=="right"){
-    i=i+1
-    j=j+1
-    out=out+matrix[i][j];
-}
-      }
-      console.log(out)
+   }
+  
+   result.sort((a,b)=>a-b);
+   console.log(result[result.length-1])
+    
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`1

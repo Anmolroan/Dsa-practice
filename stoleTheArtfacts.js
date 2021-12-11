@@ -17,38 +17,31 @@ function runProgram(input) {
   
    
   }
-  function main(weight,value,S,N){
-      let av =[];
-      for(let i =0;i<N;i++){
-          av.push(value[i]/weight[i])
-      }
-    //   console.log(av);
-      function swap(arr,i,j){
-          var temp=arr[i];
-          arr[i]=arr[j];
-          arr[j]=temp;
-      }
-      for(let i =0;i<N;i++){
-          for(let j =0;j<N-1-i;j++){
-              if(av[j]>av[j+1]){
-                  swap(av,j,j+1);
-                  swap(weight,j,j+1);
-                  swap(value,j,j+1)
-              }
-          }
-      }
-      var stole=0;
-      
-   for(let i =N-1;i>=0;i--){
-      
-       if(S>=weight[i]){
-           stole=stole+value[i];
-           S=S-weight[i]
-       }
+  function main(weight,value,S,N){;
+   let matrix =[];
+   for(let i=0;i<=S;i++){
+     let temp =[];
+     for(let j =0;j<=N;j++){
+temp.push(-1)
+     }
+matrix.push(temp)
    }
-//    console.log(weight);
-//    console.log(value)
-console.log(stole)
+  function stole(S,N){
+    if(matrix[S][N]!=-1){
+      return matrix[S][N]
+    }
+if(S==0||N==0){
+  return 0;
+}
+if(weight[N-1]<=S){
+  return matrix[S][N]= Math.max(value[N-1]+stole(S-weight[N-1],N-1),stole(S,N-1))
+}
+else if(weight[N-1]>S){
+  return matrix[S][N]= stole(S,N-1)
+}
+  }
+  console.log(stole(S,N));
+
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`1
