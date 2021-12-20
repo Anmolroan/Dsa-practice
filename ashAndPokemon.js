@@ -7,8 +7,8 @@ function runProgram(input) {
        let N =+input[line++];
        let arr1 =input[line++].trim().split(" ").map(Number);
        let arr2 =input[line++].trim().split(" ").map(Number);
-       arr1.sort((a,b)=>b-a)
-       arr2.sort((a,b)=>b-a)
+       arr1.sort((a,b)=>a-b);
+       arr2.sort((a,b)=>a-b);
        pokemon(arr1,arr2,N)
    }
   }
@@ -16,6 +16,8 @@ function runProgram(input) {
       let count =0;
       let i =0;
       let j =0;
+      console.log(arr1);
+      console.log(arr2);
   while(i<N&&j<N){
 if(arr1[i]<arr2[j]){
     i++;
@@ -31,13 +33,10 @@ if(arr1[i]<arr2[j]){
   }
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    3
-    12 3 4
-    5 4 1
-    2
-    1 5
-    1 4`);
+    runProgram(`1
+    9
+    462 652 398 52 870 213 291 642 351
+    762 498 513 959 896 752 974 788 371`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

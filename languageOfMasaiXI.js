@@ -1,22 +1,20 @@
 function runProgram(input) {
-    // Write code here;
-    input =input.trim().split('\n');
-    let N =+input[0];
-    let arr =input[1].trim().split(" ").map(Number);
-    spider(N,arr);
-   
+    // Write code here
+   input=input.trim().split("\n");
+   let N =+input[0];
+   let string =input[1].trim();
+   addHeros(N,string);
   }
-  function spider(N,arr) {
-function rec(n) {
-if(n===N){
-  return 0;
-}
-return sum+Math.abs(arr[n]-arr[n+1])
-}
+  function addHeros(N,string) {
+      if(string[0]==="a"||string[0]==="e"||string[0]==="i"||string[0]==="o"||string[0]==="u"){
+          console.log(string+"hulk");
+      }else{
+          console.log(string+"thor");
+      }
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`6
-    30 10 60 10 60 50`);
+    runProgram(`5
+    abced`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
