@@ -12,18 +12,18 @@ function runProgram(input) {
    
   }
   function rotate(matrix,N){
-    console.log(matrix)
-       for(let i =0;i<N;i++){
-           for(let j=0;j<N;j++){
+
+       for(let i =0;i<Math.floor(N/2);i++){
+           for(let j=i;j<N-1-i;j++){
             let temp = matrix[i][j];
             matrix[i][j]=matrix[j][N-1-i];
         
            
             matrix[j][N-1-i]=matrix[N-1-i][N-1-j];
             matrix[N-1-i][N-1-j]=matrix[N-1-j][i];
-            // matrix[N-1-j][i]=temp;
+            matrix[N-1-j][i]=temp;
            }
-           console.log(matrix);
+          
        }
        console.log(matrix)
   }
