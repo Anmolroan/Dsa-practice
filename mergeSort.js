@@ -46,13 +46,13 @@ for(let i =0;i<N;i++){
          
           while(i<=mid&&j<=r){
               if(a[i]<=a[j]){
-                 ma[k]=a[i]
+                 ma[k]=a[i];
                 
-                  i++
+                  i++;
               }
               else{
                  ma[k]=a[j]
-                  j++
+                  j++;
                   
               }
               k++;

@@ -56,6 +56,8 @@ function runProgram(input) {
               var pivot =partition(l,h);
               quickSort(l,pivot-1);
               quickSort(pivot+1,h);
+          }else{
+            return;
           }
       }
       quickSort(0,N-1);
