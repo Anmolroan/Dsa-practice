@@ -16,9 +16,44 @@ main(N,matrix)
       let bottom =N-1;
       let left =0;
       let right =N-1;
-      for(let i=left;i<N;i++){
-          
+      let output ="";
+      let count=0;
+      while(count<N*N){
+      for(let i=left;i<=right;i++){
+          output =output + matrix[top][i] +" ";
+          count++;
+          if(count===N){
+            break;
+          }
       }
+      top++;
+      for(let i=top;i<=bottom;i++){
+        output =output + matrix[i][right] +" ";
+        count++;
+        if(count===N){
+          break;
+        }
+      }
+      right--;
+      for(let i=right;i>=left;i--){
+        output =output + matrix[bottom][i] +" ";
+        count++;
+        if(count===N){
+          break;
+        }
+      }
+      bottom--;
+      for(let i=bottom;i>=top;i--){
+        output =output + matrix[i][left] +" ";
+        count++;
+        if(count===N){
+          break;
+        }
+      }
+      left++;
+      }
+      console.log(output);
+    
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`4
