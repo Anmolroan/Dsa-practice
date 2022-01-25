@@ -12,14 +12,16 @@ function runProgram(input) {
       let j =0;
     let count = 0;
       while(i<N&&j<M){
-          if(d[j]<=(A[i]+K)&&d[j]>=(A[i]-K)){
+          if(A[j]>=d[i]-K&&A[j]<=d[i]+K){
               count++;
               i++;
               j++;
-          }else if(d[j]>A[i]){
-j++;
+          }else if(A[j]<d[i]-K){
+            j++;
+           
           }else{
-              i++;j++
+              i++;
+              
           }
       }
       console.log(count)
