@@ -1,16 +1,26 @@
 function runProgram(input) {
     // Write code here
-    input=input.trim().split("\n");
-    let n=+input[0];
-    let a=input[1].trim().split(" ").map(Number);
-    let b=input[2].trim().split(" ").map(Number);
-    console.log(n, a, b);
-    
+   input=+input;
+   main(input)
   }
+  function main(input){
+      let N=[];
+function now(n){
+    if(N[n]!=undefined){
+        return N[n];
+    }
+  if(n===0){
+      return 1
+  }
+  if(n<0){
+      return 0
+  }
+return N[n]=now(n-1)+now(n-3)+now(n-4)
+  }
+  console.log(now(input))
+}
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    1 3 5
-    2 6 8`);
+    runProgram(`5`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

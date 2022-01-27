@@ -1,16 +1,32 @@
 function runProgram(input) {
     // Write code here
-    input=input.trim().split("\n");
-    let n=+input[0];
-    let a=input[1].trim().split(" ").map(Number);
-    let b=input[2].trim().split(" ").map(Number);
-    console.log(n, a, b);
-    
+    input =input.trim().split('\n');
+var tests =+input[0];
+var line =1;
+for(var i=0; i<tests;i++){
+var matrix =[];
+
+
+var N =input[line++];
+for(var j =0;j<N;j++){
+    var temp =input[line++].trim().split(" ").map(Number);
+    matrix.push(temp);
+}
+console.log(matrix);
+}
+
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    1 3 5
-    2 6 8`);
+    runProgram(`2
+    3
+    1 2 3
+    4 5 6
+    7 8 9
+    4
+    1 2 3 4
+    5 6 7 8
+    4 5 6 7
+    2 3 4 5`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
