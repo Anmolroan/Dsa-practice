@@ -1,16 +1,18 @@
 function runProgram(input) {
     // Write code here
-    input =input.trim().split('\n');
-    var test = input[0];
-    let line =1;
-    for(let i =0; i<test; i++){
-        let N =+input[line++];
-        let matrix =[];
-        for(let j =0; j<N; j++){
-            let temp=input[line++].trim().split(" ").map(Number);
-            matrix.push(temp)
-        }
-        zTraversal(N,matrix);
+    input =input.trim().split("\n");
+    
+    var tests =+input[0];
+    var line =1;
+    for(var i =0;i<tests;i++) {
+      var N =+input[line++];
+      var matrix =[];
+      for(var j=0;j<N;j++){
+        var temp = input[line++].trim().split(" ").map(Number);
+        // console.log(temp);
+        matrix.push(temp);
+      }
+      zTraversal(N,matrix);
     }
    
   }
@@ -20,11 +22,15 @@ function runProgram(input) {
   
 }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
+    runProgram(`2
     3
     1 2 3
     4 5 6
     7 8 9
+    3
+    2 4 5
+    3 4 5
+    4 5 6
     `);
   } else {
     process.stdin.resume();
