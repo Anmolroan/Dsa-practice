@@ -1,46 +1,39 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tests=+input[0];
+    let N =+input[0];
     let line =1;
-    for(let i=0; i<tests; i++){
-let N =+input[line++];
-let arr=input[line++].trim().split(" ").map(Number)
-let K =+input[line++];
-pairLessThanK(arr,N,K);
+    let name=[];
+    let marks =[]
+    for(let i=0;i<N;i++){
+        let [n,m]=input[line++].trim().split(" ");
+        name.push(n);
+        marks.push(+m)
+        
     }
-   
+   makeLeaderboard(name,marks)
   }
-  function pairLessThanK(arr,N,K){
-    arr.sort((a,b)=>a-b);
-    let i =0;
-    let j =N-1;
-    let max=-Infinity;
-    while(i<j){
-      let sum =arr[i]+arr[j];
-      if(sum>=K){
-j--;
-      }else{
-        if(max<sum){
-          max=sum;
+  function makeLeaderboard(name,marks){
+
+console.log(name);
+for(let i = 0; i < marks.length; i++){
+    for(let j = 0;j<marks.length-i-1;j++){
+        if(marks[j]>marks[j+1]){
+            [marks[j], marks[j+1]]=[marks[j+1], marks[j]];
+            [name[j], name[j+1]]=[name[j+1], name[j]]
         }
-        i++;
-      }
     }
-if(max===-Infinity){
-  console.log(-1)
-}else{
-  console.log(max)
 }
+console.log(name,marks);
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    5
-    1 2 3 4 5
-    7
-    3
-    30 10 20
-    15`);
+    runProgram(`6
+    rancho 45
+    chatur 32
+    raju 30
+    farhan 28
+    virus 32
+    joy 45`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

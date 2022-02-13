@@ -1,46 +1,24 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tests=+input[0];
-    let line =1;
-    for(let i=0; i<tests; i++){
-let N =+input[line++];
-let arr=input[line++].trim().split(" ").map(Number)
-let K =+input[line++];
-pairLessThanK(arr,N,K);
-    }
+    let N=+input[0];
+    let arr =input[1].trim().split(" ").map(Number);
+    bubblesort(N,arr);
    
   }
-  function pairLessThanK(arr,N,K){
-    arr.sort((a,b)=>a-b);
-    let i =0;
-    let j =N-1;
-    let max=-Infinity;
-    while(i<j){
-      let sum =arr[i]+arr[j];
-      if(sum>=K){
-j--;
-      }else{
-        if(max<sum){
-          max=sum;
-        }
-        i++;
-      }
+  function bubblesort(N,arr){
+  for(let i = 0; i < N; i++){
+for(let j=0;j<N-i-1; j++){
+    if(arr[j]>arr[j+1]){
+       [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
     }
-if(max===-Infinity){
-  console.log(-1)
-}else{
-  console.log(max)
 }
   }
+  console.log(arr)
+  }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    5
-    1 2 3 4 5
-    7
-    3
-    30 10 20
-    15`);
+    runProgram(`5
+    3 5 0 9 8`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

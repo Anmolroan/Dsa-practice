@@ -1,46 +1,35 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tests=+input[0];
+    let tc=+input[0];
     let line =1;
-    for(let i=0; i<tests; i++){
-let N =+input[line++];
-let arr=input[line++].trim().split(" ").map(Number)
-let K =+input[line++];
-pairLessThanK(arr,N,K);
+    for(let i =0;i<tc;i++){
+        let N = +input[line++];
+        let str =input[line++].trim();
+       decipherString(N,str)
     }
-   
   }
-  function pairLessThanK(arr,N,K){
-    arr.sort((a,b)=>a-b);
-    let i =0;
-    let j =N-1;
-    let max=-Infinity;
-    while(i<j){
-      let sum =arr[i]+arr[j];
-      if(sum>=K){
-j--;
-      }else{
-        if(max<sum){
-          max=sum;
-        }
-        i++;
+  function decipherString(N,str){
+     
+      let i =0;
+      let j =1;
+      let bag="";
+      while(i<N-1&&j<N){
+          let pivot =str[j];
+          for(let k=0;k<pivot;k++){
+            bag=bag+str[i];
+          }
+          i=i+2;
+          j=j+2;
       }
-    }
-if(max===-Infinity){
-  console.log(-1)
-}else{
-  console.log(max)
-}
+      console.log(bag);
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`2
-    5
-    1 2 3 4 5
-    7
-    3
-    30 10 20
-    15`);
+    6
+    a2b1c2
+    6
+    a2z1a2`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

@@ -1,46 +1,41 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tests=+input[0];
+    let tc=+input[0];
     let line =1;
-    for(let i=0; i<tests; i++){
-let N =+input[line++];
-let arr=input[line++].trim().split(" ").map(Number)
-let K =+input[line++];
-pairLessThanK(arr,N,K);
+    for(let i =0;i<tc;i++){
+        let N = +input[line++];
+        let str =input[line++].trim();
+       cipherString(N,str)
     }
    
   }
-  function pairLessThanK(arr,N,K){
-    arr.sort((a,b)=>a-b);
-    let i =0;
-    let j =N-1;
-    let max=-Infinity;
-    while(i<j){
-      let sum =arr[i]+arr[j];
-      if(sum>=K){
-j--;
-      }else{
-        if(max<sum){
-          max=sum;
-        }
-        i++;
-      }
-    }
-if(max===-Infinity){
-  console.log(-1)
+  function cipherString(N,str){
+      let i = 0;
+      let j =0;
+      let bag="";
+      let count=0;
+      while(i<N){
+if(str[i]===str[j]){
+    j++;
+    count++;
+    
+    
 }else{
-  console.log(max)
+bag=bag+str[i]+count;
+i=j;
+
+count=0;
 }
+      }
+      console.log(bag)
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`2
     5
-    1 2 3 4 5
-    7
-    3
-    30 10 20
-    15`);
+    aabcc
+    5
+    aazaa`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
