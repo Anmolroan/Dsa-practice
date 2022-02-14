@@ -1,42 +1,24 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tc=+input[0];
-    let line =1;
-    for(let i =0;i<tc;i++){
-        let N = +input[line++];
-        let str =input[line++].trim();
-       cipherString(N,str)
-    }
-   
+    let N = +input[0];
+    let str = input[1].trim();
+stringCordinates(N,str)
   }
-  function cipherString(N,str){
-      let i = 0;
-      let j =0;
-      let bag="";
-      let count=0;
-      while(i<N){
-if(str[i]===str[j]){
-    j++;
-    count++;
-    
-    
-}else{
-bag=bag+str[i]+count;
-i=j;
-
-count=0;
-}
-      }
-      console.log(bag);
-      
+  function stringCordinates(N,str) {
+let r=0;
+let c =0;
+    for(let i = 0; i < N; i++) {
+        if (str[i] === 'u')r = r + 1;
+       else if (str[i] === 'd')  r = r - 1;
+        else if (str[i] === 'r')  c= c+ 1;
+        else{ c = c- 1};
+    }
+    console.log(r,c)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    5
-    aabcc
-    5
-    aazaa`);
+    runProgram(`4
+    lldd`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

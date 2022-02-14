@@ -1,42 +1,31 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tc=+input[0];
+    let [N,M]= input[0].trim().split(" ").map(Number);
     let line =1;
-    for(let i =0;i<tc;i++){
-        let N = +input[line++];
-        let str =input[line++].trim();
-       cipherString(N,str)
+    let matrix = [];
+    for(let i=0; i<N; i++) {
+        let temp=input[line++].trim().split(" ").map(Number);
+        matrix.push(temp);
     }
+    borderLess(matrix,N,M)
    
   }
-  function cipherString(N,str){
-      let i = 0;
-      let j =0;
-      let bag="";
-      let count=0;
-      while(i<N){
-if(str[i]===str[j]){
-    j++;
-    count++;
-    
-    
-}else{
-bag=bag+str[i]+count;
-i=j;
-
-count=0;
+  function borderLess(matrix,N,M) {
+      let sum=0;
+      for(let i=1;i<N-1;i++) {
+    for(let j=1;j<M-1;j++) {
+        sum += matrix[i][j];
 }
       }
-      console.log(bag);
-      
+      console.log(sum)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    5
-    aabcc
-    5
-    aazaa`);
+    runProgram(`4 4
+    1 2 3 4
+    5 6 7 8
+    9 10 11 12
+    13 14 15 16`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

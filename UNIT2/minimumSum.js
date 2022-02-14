@@ -1,42 +1,35 @@
 function runProgram(input) {
     // Write code here
     input = input.trim().split("\n");
-    let tc=+input[0];
+    let test = +input[0];
     let line =1;
-    for(let i =0;i<tc;i++){
-        let N = +input[line++];
-        let str =input[line++].trim();
-       cipherString(N,str)
+    for(let i=0;i<test; i++){
+        let [N,K]=input[line++].trim().split(" ").map(Number);
+        let arr =input[line++].trim().split(" ").map(Number);
+        minimumSum(N,K,arr);
     }
    
   }
-  function cipherString(N,str){
-      let i = 0;
-      let j =0;
-      let bag="";
-      let count=0;
-      while(i<N){
-if(str[i]===str[j]){
-    j++;
-    count++;
-    
-    
-}else{
-bag=bag+str[i]+count;
-i=j;
-
-count=0;
-}
-      }
-      console.log(bag);
-      
+  function minimumSum(N,K,arr){
+      let sum = 0;
+      for(let i=0;i<K; i++){
+        sum =sum + arr[i];
+      };
+      let min=sum;
+      for(let i=K;i<N;i++){
+          sum=sum - arr[i-K];
+          sum=sum + arr[i];
+          if(sum<min){min=sum}
+      };
+      console.log(min)
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`2
-    5
-    aabcc
-    5
-    aazaa`);
+    5 3
+    9 9 -5 9 5 
+    5 4
+    2 7 6 2 -5 
+    `);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
