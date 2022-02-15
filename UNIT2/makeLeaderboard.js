@@ -18,7 +18,7 @@ function runProgram(input) {
 console.log(name);
 for(let i = 0; i < marks.length; i++){
     for(let j = 0;j<marks.length-i-1;j++){
-        if(marks[j]>marks[j+1]){
+        if(marks[j]<marks[j+1]){
             [marks[j], marks[j+1]]=[marks[j+1], marks[j]];
             [name[j], name[j+1]]=[name[j+1], name[j]]
         }
