@@ -14,66 +14,29 @@ function runProgram(input) {
    
   }
   function makeLeaderboard(marks,name){
-      console.log(marks,name);
-      function swap(arr,i,j){
-          let temp =arr[i];
-          arr[i] = arr[j];
-          arr[j]=temp
-      }
-     
- 
-function checkstring(a,b){
-  for(let i=0;i<Math.min(a.length,b.length);i++){
-    if(a[i]!=b[i]){
-    if(a[i]>b[i]){
-      return true;
-    }
-    else{
-      return false;
-    }
-
-    }
-    else{
-      if(a.length>b.length){
-        return true
-      }
-      else{
-        false
+    console.log(marks,name);
+    let N =marks.length;
+    function swap(arr,i,j){
+      var temp =arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    };
+    for(let i =0;i<N-1;i++){
+      for(let j =0;j<N-1-i;j++){
+if(marks[j]<marks[j+1]){
+swap(marks,j,j+1);
+swap(name,j,j+1)
+}
+else if(marks[j]===marks[j+1]){
+if(name[j]>name[j+1]){
+  swap(name,j,j+1);
+}
       }
     }
+  
+}
+console.log(marks,name);
   }
-
-
-}
-for(let i =0;i<marks.length;i++){
-  for(let j = 0;j<marks.length-i-1;j++){
-    if(checkstring(name[j],name[j+1])===true){
-      swap(name,j,j+1);
-      swap(marks,j,j+1)
-    }
-  }
-};
-for(let i =0;i<marks.length;i++){
-  for(let j =0;j<marks.length-i-1;j++){
-      if(marks[j]<marks[j+1]){
-          swap(marks,j,j+1);
-          swap(name,j,j+1);
-  }
-}
-}
-let index =1;
-let output ="1";
-console.log(name[0]+" "+index);
-for(let i = 1; i <marks.length;i++) {
-  if(marks[i]==marks[i-1]){
-    index = index;
-  }else{
-    index=i+1;
-  }
-  console.log(name[i]+" "+index)
-}
-
-}
  
     if (process.env.USER=== "anmolkumar") {
       runProgram(`6
