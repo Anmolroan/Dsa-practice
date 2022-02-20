@@ -10,25 +10,29 @@ Unique(str)
    
   }
   function Unique(str) {
-      let q=[];
-      q.push(str[0]);
-      let ans=str[0];
-      for(let i=1; i<str.length; i++){
-        if(str[i]!=q[0]){
-            q.push(str[i]);
-            ans=ans+q[0];
-        }else{
-            q.shift();
-            if(q.length>0){
-                ans=ans+q[0];
-            }else{
-                ans=ans+"#"
-            }
-            
+    var obj={};
+    let bag="";
+    for(let i =0;i<str.length;i++){
+      if(obj[str[i]]===undefined){
+        obj[str[i]]=1;
+      }else{
+        obj[str[i]]=obj[str[i]]+1;
+      }
+      let flag =true;
+      for(let key in obj){
+        if(obj[key]===1){
+          bag=bag+key;
+          flag=false;
+          break;
         }
       }
+      if(flag){
+        bag=bag+"#";
+      }
+      
+    }
     
-      console.log(ans);
+      console.log(bag);
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`2

@@ -1,17 +1,10 @@
 function runProgram(input) {
     // Write code here
-    input = input.trim().split("\n");
-    let tc=+input[0];
-    let line=1;
-   for(let i=0; i<tc; i++) {
-
-   }
-   
+   var [n,k]=input.trim().split(" ").map(Number);
+   find(n,k)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    5
-    5 4 1 3 2`);
+    runProgram(`123 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -30,3 +23,21 @@ function runProgram(input) {
       process.exit(0) ;
     });
   }
+  function find(n,k){
+     function rec(n){
+         if(n<10){
+            console.log(n);
+            return ;
+         }
+         var str =n+"";
+         var n =0;
+         for(let i =0;i<str.length;i++){
+            n =n+(+str[i]);
+
+         };
+         
+         rec(n);
+     }
+    rec(n*k);
+   
+}
