@@ -24,8 +24,7 @@ repeatedAndMissing(N,arr)
         if(i+1!=arr[i]){
            missing=i+1;
           
-        }
-      
+        }      
     }
       console.log(missing+" "+rep);
   }
