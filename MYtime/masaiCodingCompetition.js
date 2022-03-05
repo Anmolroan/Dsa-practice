@@ -7,7 +7,7 @@ for(let i=1;i<=N;i++){
     var arr=input[i].trim().split(" ")
     matrix.push(arr)
 }
-   find(matrix)
+   find(matrix);
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`5
