@@ -5,16 +5,26 @@ function runProgram(input) {
    
   }
   function motuPatlu(N) {
-      function rec(N){
+    let max =null;
+      function rec(N,cur){
           if(N===0){
-              return 1;
+            if(max==null||cur<max){
+              max = cur;
+            }
+              return ;
               
           }if(N<0){
-              return 0
+              return 
           }
-          return rec(N-1)+rec(N-2)+rec(N-3)+rec(N-4)+rec(N-5);
+        
+          rec(N-5,cur+1)
+          rec(N-4,cur+1)
+          rec(N-3,cur+1)
+          rec(N-2,cur+1)
+          rec(N-1,cur+1);
       }
-      console.log(rec(N));
+      rec(N,0);
+      console.log(max)
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`26`);
