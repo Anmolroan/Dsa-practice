@@ -19,9 +19,9 @@ function runProgram(input) {
               stack.pop();
               top--;
           }if(stack.length!=0){
-              ans.push(stack[top])
+              ans.push(stack[top]);
           }else{
-              ans.push(-1)
+              ans.push(-1);
           }
           stack.push(i);
           top++;
@@ -30,7 +30,7 @@ function runProgram(input) {
           if(ans[i]===-1){
               ans[i]=i+1;
           }else{
-              ans[i]=Math.abs(i-ans[i])
+              ans[i]=Math.abs(i-ans[i]);
           }
       }
       console.log(ans.join(" "))
