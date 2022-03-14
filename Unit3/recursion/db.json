@@ -1,0 +1,785 @@
+
+{
+           "discount":15,
+        "discountType":"%",
+        "discountDetails":"Save",
+        "coupons":"0",
+        "exclusive":0,
+        "category":"Sporting Goods",
+        "title1":"STADIUM GOODS",
+        "title2":"Sneak it",
+        "price":3000,
+        "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/6b702afb-6fac-4fc9-95f8-a96e77991b78.jpeg&w=3840&q=75"
+}
+
+{
+    "discount":25,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Womens",
+ "title1":"Kiehl's Canada",
+ "title2":"Get ready to glow",
+ "price":1000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/123b36fd-ef5b-40c7-904b-fb7a4121753f.jpeg&w=640&q=75"
+}
+,
+
+
+
+{
+    "discount":50,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Womens",
+ "title1":"Banter by Piercing Pagoda",
+ "title2":"Sparkle up your life",
+ "price":2000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/0f3fa3f6-3d3f-4de7-ac5c-ad497bdf80c2.jpeg&w=640&q=75"
+}
+
+{
+"discount":25,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"American Eagle",
+"title2":"Be on top",
+"price":4000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/018c1cbe-95db-401a-9570-1f2f9e379faa.jpeg&w=640&q=75"
+}
+
+{
+    "discount":20,
+    "discountType":"%",
+    "discountDetails":"Save",
+    "coupons":"0",
+    "exclusive":0,
+    "category":"Womens",
+    "title1":"QVC",
+    "title2":"Beauty update",
+    "price":2000,
+    "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/aa2a7adb-0592-44e2-a02e-520d620fae03.jpeg&w=640&q=75"
+    }
+
+{
+    "discount":25,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"Stuart Weitzman",
+ "title2":"Great shoe steels",
+ "price":7000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/cf0c7351-217e-4be7-a824-1a81e45db611.png&w=640&q=75"
+}
+{
+    "discount":40,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"Dooney & Bourke",
+ "title2":"Find the perfect bag",
+ "price":8000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/c49d2ac9-de04-4629-aff8-90a96678ccec.jpeg&w=640&q=75"
+}
+{
+    "discount":0,
+ "discountType":"",
+ "discountDetails":"Free Gift",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"Bloomingdale's",
+ "title2":"March fashion gift card event",
+ "price":0,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/ab0d301a-3cf8-4ac0-9ff7-62fd739e62c0.png&w=640&q=75"
+}
+
+
+
+{
+    "discount":19.95,
+ "discountType":"$",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Womens",
+ "title1":"Rodan + Fields",
+ "title2":"Life-changing skin products",
+ "price":2000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/3459cd8e-b8c5-4d93-8977-a312c92ad2fa.jpeg&w=640&q=75"
+}
+
+{
+    "discount":75,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"Saks OFF 5th",
+ "title2":"Fine jewels",
+ "price":9000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/f74844b3-cd47-4eec-95aa-607007da6638.png&w=640&q=75"
+}
+
+{
+    "discount":25,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Travel",
+ "title1":"Michael Kors",
+ "title2":"Spring accessories",
+ "price":11000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/60386269-08aa-4cdf-9d99-d7a66186ea68.png&w=640&q=75"
+}
+
+
+
+<!-- after meeting -->
+{
+    "discount":30,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"Ted Baker",
+ "title2":"Stylish options",
+ "price":21000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/1dc0d405-d6cd-4e3a-bcc0-89d11885c7c2.png&w=640&q=75"
+}
+
+
+{
+    "discount":60,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Education",
+ "title1":"Udemy",
+ "title2":"Quality education accessible to all",
+ "price":1000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/bd3a0e1c-5cb0-46a5-93cd-de00722a520e.png&w=640&q=75"
+}
+
+
+{
+    "discount":700,
+ "discountType":"$",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods"
+ "title1":"Saks Fifth Avenue",
+ "title2":"Score new styles",
+ "price":5000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/c17c2a44-aba1-4cef-b7af-119a7957b301.png&w=640&q=75"
+}
+
+
+
+{
+    "discount":40,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods",
+ "title1":"Camper",
+ "title2":"Instantly iconic footwear",
+ "price":6000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/edead243-38bf-4c78-a08f-21ab44ff4f7f.png&w=640&q=75"
+}
+
+
+{
+    "discount":50,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods",
+ "title1":"JD Sports",
+ "title2":"Fresh this spring",
+ "price":6000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/dd6fc7fa-54be-4a21-86a8-0c5d0ee190f6.png&w=640&q=75"
+}
+
+{
+    "discount":40,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods",
+ "title1":"Reebok",
+ "title2":"Shoe check up",
+ "price":6000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/a9507bbb-74d6-41ea-a4c9-4b52f20fe0fe.png&w=640&q=75"
+}
+
+{
+    "discount":50,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods",
+ "title1":"Journeys",
+ "title2":"Time for a new pair",
+ "price":8000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/355cb62a-9af6-4ede-bed7-7eca8629936c.png&w=640&q=75"
+}
+
+{
+    "discount":40,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods",
+ "title1":"Foot Locker",
+ "title2":"Sneak attack",
+ "price":3000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/04b0eead-49dc-43f3-9b16-f9f4af74d394.png&w=640&q=75"
+}
+
+{
+    "discount":50,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Womens",
+ "title1":"Torrid",
+ "title2":"Plus-size clothing for women",
+ "price":3000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/7dab0a84-816f-4e5c-b055-153f26bb0080.png&w=640&q=75"
+}
+
+
+
+{
+    "discount":50,
+ "discountType":"%",
+ "discountDetails":"Save",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Health",
+ "title1":"Myprotein",
+ "title2":"Unwrap your ambition",
+ "price":8000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/2996e477-0862-4071-a7ff-799cdfd74e4c.jpeg&w=640&q=75"
+}
+
+{
+    "discount":59,
+ "discountType":"$",
+ "discountDetails":"From",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing"
+ "title1":"ILoveDooney",
+ "title2":"Get carried away",
+ "price":12000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/0b7d6e53-a7c3-49e6-aa68-8160ec3d31cf.jpeg&w=640&q=75"
+}
+
+
+{
+    "discount":25,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Hopusehold",
+ "title1":"The Home Depot",
+ "title2":"Set the table",
+ "price":28000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/2f747a99-bdd1-4b7e-97d2-c52b041a659c.jpeg&w=640&q=75"
+}
+
+{
+    "discount":0,
+ "discountType":"",
+ "discountDetails":" Free Gift",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Gift",
+ "title1":"Bluemercury",
+ "title2":"Get ready to glow",
+ "price":0,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/7f8f4c79-9cf1-4fd1-9479-e3b262b30392.jpeg&w=640&q=75"
+}
+
+
+
+{
+    "discount":1999,
+ "discountType":"$",
+ "discountDetails":"From",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Household",
+ "title1":"Mattress Firm",
+ "title2":"GGet the best night rest",
+ "price":12000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/733537fb-95cb-4c98-bfab-89814fbf35f6.png&w=640&q=75"
+}
+
+
+
+{
+    "discount":65,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"REVOLVE",
+ "title2":"Sale alert",
+ "price":2000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/936725bb-af7e-4ac2-be97-cbd8f9092af5.png&w=640&q=75"
+}
+{
+    "discount":25,
+ "discountType":"%",
+ "discountDetails":"Extra",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Clothing",
+ "title1":"ASOS",
+ "title2":"Fashion for fashionistas",
+ "price":2000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/8f9b0e58-4a08-421e-99f7-39cb3ed876ee.png&w=640&q=75"
+}
+
+
+
+
+<!-- after 25 -->
+
+{
+    "discount":40,
+ "discountType":"%",
+ "discountDetails":"Up to",
+ "coupons":"0",
+ "exclusive":0,
+ "category":"Sporting Goods",
+ "title1":"Tommy Hilfiger",
+ "title2":"Style yourself for spring",
+ "price":9000,
+ "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/7ea00432-138b-4640-841e-a6caaf27f3c0.jpeg&w=640&q=75"
+}
+
+{
+"discount":70,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Womens",
+"title1":"SHEIN",
+"title2":"Dress to impress",
+"price":9000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/1435b721-a7c8-47d7-8879-92cec94da005.png&w=640&q=75"
+}
+
+
+
+
+{
+"discount":70,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"Sleeper",
+"title2":"Sleep in style",
+"price":2000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/3e4c9577-34ae-4c79-be0f-fada059944da.jpeg&w=640&q=75"
+}
+
+{
+"discount":70,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Womens",
+"title1":"Perfumania",
+"title2":"Sweet scents",
+"price":1000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/fc61fcfa-ca73-4630-a0b0-dd09c8c55fae.png&w=640&q=75"
+}
+
+{
+"discount":30,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Womens",
+"title1":"Levi's",
+"title2":"Premium denim",
+"price":3000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/e30c1f40-b915-4ef2-94a4-b9b93d997fa9.png&w=640&q=75"
+}
+<!-- 6 -->
+{
+"discount":30,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"Calvin Klein",
+"title2":"Layers and layers",
+"price":7000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/115569dc-23da-4314-ab48-78c3c7227b1c.jpeg&w=640&q=75"
+}
+<!-- 7 -->
+{
+"discount":90,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Sporting Good",
+"title1":"Book Outlet",
+"title2":"Get a good book",
+"price":1000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/69411b27-5b27-480a-8461-15526ad23363.jpeg&w=640&q=75"
+}
+<!-- 8 -->
+{
+"discount":40,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"Ann Taylor",
+"title2":"Spring clothing",
+"price":0,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/04b737f3-b0c0-4b60-81f2-387c7c4ab8d0.png&w=640&q=75"
+}
+
+<!-- 9 -->
+
+{
+"discount":40,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Womens",
+"title1":"PrettyLittleThing",
+"title2":"Save on new looks",
+"price":3000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/6bf79474-a7a6-4973-b1b3-e8baa9d994ae.jpeg&w=640&q=75"
+}
+<!-- 10 -->
+{
+"discount":70,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Houeholds",
+"title1":"Overstock",
+"title2":"Outdoor refresh",
+"price":9000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/55a20348-310d-45ec-93be-c829d5b5c632.png&w=640&q=75"
+}
+<!-- 11 -->
+{
+"discount":60,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Babies",
+"title1":"Samuel Johnston",
+"title2":"The best baby products",
+"price":1100,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/00a4d057-25cb-4f40-8e42-abdd820f57f2.jpeg&w=640&q=75"
+}
+
+
+<!-- 12 -->
+{
+"discount":15,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Travel",
+"title1":"Priceline",
+"title2":"Adventure awaits",
+"price":29000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/e7b7a6db-7ed6-41b5-b056-8ddb9d596970.jpeg&w=640&q=75"
+}
+
+<!-- 13 -->
+{
+"discount":15,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Travel",
+"title1":"Booking.com",
+"title2":"Book your next stay",
+"price":21000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/bda6ff7d-5f43-48d5-a510-31ce59cfb77f.jpeg&w=640&q=75"
+}
+<!-- 14 -->
+
+{
+"discount":500,
+"discountType":"$",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Travel"
+"title1":"Southwest Vacations",
+"title2":"Fill your vacation dreams",
+"price":25000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/c8c2171b-d850-4728-9aea-c4c1556afc65.png&w=640&q=75"
+}
+
+<!-- 15 -->
+
+{
+"discount":40,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Sporting Goods",
+"title1":"Under Armour",
+"title2":"Women's sports gear",
+"price":6000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/462f6d06-837a-4023-be15-e6825546c116.png&w=640&q=75"
+}
+
+<!-- 16 -->
+{
+"discount":30,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Babies",
+"title1":"Kidsbooks.com",
+"title2":"Quality books",
+"price":2000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/d1ae1751-83ba-4f06-806c-6cf65c762fbe.png&w=640&q=75"
+}
+<!-- 17 -->
+{
+"discount":20,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Womens",
+"title1":"Aurate",
+"title2":"Our humankind sale",
+"price":6200,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/644428dc-b1c0-4f15-85ac-ec2bef5e9893.jpeg&w=640&q=75"
+}
+<!-- 18 -->
+{
+"discount":25,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Travel",
+"title1":"Radisson Hotels",
+"title2":"Time to relax",
+"price":8000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/2d9302c4-2983-48fc-980c-eb2dd80436c1.png&w=640&q=75"
+}
+<!-- 19 -->
+{
+"discount":40,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Households",
+"title1":"Martha.com",
+"title2":"For you and your home",
+"price":9000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/bfa50233-fd54-4b6f-8237-0c7ccdd02cfd.jpeg&w=640&q=75"
+}
+<!-- 20 -->
+{
+"discount":40,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Sporting Goods",
+"title1":"Nike",
+"title2":"Take it to the next level",
+"price":3000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/480a84a5-32ad-47a9-928a-2df0e0c1a59e.jpeg&w=640&q=75"
+}
+
+<!-- 21 -->
+
+{
+"discount":20,
+"discountType":"%",
+"discountDetails":"Extra",
+"coupons":"0",
+"exclusive":0,
+"category":"Health",
+"title1":"JCPenney",
+"title2":"Spring style event",
+"price":18000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/031080b0-96bb-4c8c-9f8d-1d32fc77421d.jpeg&w=640&q=75"
+}
+
+<!-- 22 -->
+{
+"discount":50,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Sporting Goods"
+"title1":"Columbia Sportswear",
+"title2":"Stay sporty, look trendy",
+"price":12200,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/bfa1e682-3a81-4f05-ad57-9494a8d574a3.png&w=640&q=75"
+}
+
+<!-- 23 -->
+{
+"discount":40,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"Steve Madden",
+"title2":"Beautiful shoes",
+"price":2000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/16161f88-fe2c-437d-b99b-8d24cd4f7958.png&w=640&q=75"
+}
+<!-- 24 -->
+{
+    "discount":30,
+    "discountType":"%",
+     "discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Households",
+"title1":"Bed Bath & Beyond,
+"title2":"Sweet dreams",
+"price":0,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/75dcd70e-cee3-418c-bf48-cef1907f658c.png&w=640&q=75"
+}
+
+
+<!-- 25 -->
+{
+"discount":15,
+"discountType":"$",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Computer",
+"title1":"Turbotax",
+"title2":"Get your taxes done right",
+"price":12000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/3d42cb9e-5b73-4492-af7f-2b4fb262837d.jpeg&w=640&q=75"
+}
+
+<!-- 26 -->
+
+{
+"discount":25,
+"discountType":"%",
+"discountDetails":"Save",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"Lane Bryant",
+"title2":"Fashion for every body",
+"price":4000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/3dd03bca-8f2d-4c1f-8014-a15ee202dd5f.png&w=640&q=75"
+}
+<!-- 27 -->
+{
+"discount":60,
+"discountType":"%",
+"discountDetails":"Up to",
+"coupons":"0",
+"exclusive":0,
+"category":"Clothing",
+"title1":"H&M",
+"title2":"Clothing essentials",
+"price":12000,
+"image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/e6d9b567-e803-41ce-9202-5ea98ea89ee6.jpeg&w=640&q=75"
+}
+<!-- 28 -->
+{
+    "discount":25,
+    "discountType":"%",
+    "discountDetails":"Save",
+    "coupons":"0",
+    "exclusive":0,
+    "category":"Health",
+    "title1":"No7",
+    "title2":"Discover NO7 skincare",
+    "price":2000,
+    "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/f69f702b-6741-44b9-8c05-37f735fb2d2c.png&w=640&q=75"
+    }
+    
+<!-- 29 -->
+{
+    "discount":30,
+    "discountType":"%",
+    "discountDetails":"Up to",
+    "coupons":"0",
+    "exclusive":0,
+    "category":"Computer",
+    "title1":"Lorex",
+    "title2":"Big savings on security ",
+    "price":122000,
+    "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/9e96da4f-0e86-4379-b7d9-5b3a46c7ed11.jpeg&w=640&q=75"
+    }
+    <!-- 30 -->
+
+    {
+        "discount":33,
+        "discountType":"%",
+        "discountDetails":"Up to",
+        "coupons":"0",
+        "exclusive":0,
+        "category":"Electronics",
+        "title1":"GameStop",
+        "title2":"Save and play",
+        "price":12000,
+        "image":"https://www.klarna.com/b2c/_next/image/?url=https://d2r76poigfg60j.cloudfront.net/672de4f2-a23a-4a1c-b921-f2502fbdfe3d.jpeg&w=640&q=75"
+        }
