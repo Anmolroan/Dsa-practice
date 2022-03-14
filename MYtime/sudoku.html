@@ -6,107 +6,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #sudoku{
-            display: grid;
-            background-color: aliceblue;
-            width: 600px;
-            grid-template-columns: repeat(9,10%);
-            grid-template-rows: repeat(9,30px);
-        }
-        #sudoku>div{
-            border: solid 1px;
-        }
+       table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+table{
+    background-color: rgb(53, 153, 153);
+}
+td{
+    width: 20px;
+    text-align: center;
+   background: rgb(212, 101, 101);
+   color: white;
+}
+#input1{
+    font-size: 22px;
+    width: 145px;
+    background-color: rgb(223, 188, 188);
+    padding:22px;
+    display: inline-block;
+}
+#div1{
+    display: inline-block;
+    margin-right:300px;
+}
     </style>
 </head>
 <body>
-    <div id="sudoku">
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
+    <div id="div1">
+    <table id="sudoku">
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+</tr>
+
+
+
        
-    </div>
+    </table>
+
+    <button id="btn"onclick=solve() > Solve Sudoku</button>
+</div>
+<div id="input1"> 
+    0 4 0 0 0 0 1 7 9 
+    0 0 2 0 0 8 0 5 4 
+    0 0 6 0 0 5 0 0 8 
+    0 8 0 0 7 0 9 1 0 
+    0 5 0 0 9 0 0 3 0 
+    0 1 9 0 6 0 0 4 0 
+    3 0 0 4 0 0 7 0 0 
+    5 7 0 1 0 0 2 0 0 
+    9 2 8 0 0 0 0 6 0
+</div>
+<button onclick= putTheValue() >Input1</button>
+
 </body>
 </html>
-<script>
-    var sudoku=document.getElementById("sudoku").chi;
-    console.log(typeof(sudoku))
+<script >
+   function putTheValue(){
+    var input =document.getElementById("input1").innerText;
+    input =input.trim().split(" ");
+    var line =0;
+    var sudoku=[];
+    for(let i =0;i<9;i++){
+   var temp =[];
+        for(let i =0;i<9;i++){
+       temp.push(input[line++]);
+        }
+        sudoku.push(temp);
+
+    }
+    dynmic(sudoku);
+
+   }
+  
+
+    function dynmic(sudoku){
+      
+        let rows=document.getElementById("sudoku");
+let trs =rows.getElementsByTagName("tr");
+for(let i =0;i<trs.length;i++){
+    
+    let tds=trs[i].getElementsByTagName("td");
+    console.log(tds)
+    for(let j =0;j<tds.length;j++){
+       console.log(typeof(+trs[i].getElementsByTagName("td")[j].innerHTML));
+        tds[j].innerHTML = sudoku[i][j];
+    }
+}
+
+
+    }
+    
+    // (+trs[i].getElementsByTagName("td")[j].innerHTML)
+
+    function  main(){
+        let rows=document.getElementById("sudoku");
+let trs =rows.getElementsByTagName("tr");
+
+      check=(r,c,n)=>{
+for(let i=0;i<9;i++){
+    if(sudoku[r][i]==n){
+        return false;
+    }
+    if(sudoku[i][c]==n){
+        return false
+    }
+}
+var r=r-r%3;
+var c=c-c%3
+for(let i =0;i<3;i++){
+for(let j =0;j<3;j++){
+    if(sudoku[r+i][c+j]==n){
+        return false;
+    }
+}
+}
+return true;
+      }
+
+      var flag=false;
+      var arr=[];
+      function solve(r,c){
+        if(r==8&&c==9){
+           flag =true;
+           
+          //  console.log(sudoku);
+           for(let i =0;i<sudoku.length;i++){
+             var temp=sudoku[i].join(" ");
+             arr.push(temp)
+           }
+            return 
+        }
+        if(c==sudoku.length){
+            r=r+1;
+            c=0;
+        }
+         
+        
+         if(sudoku[r][c]!=0){
+              solve(r,c+1)
+         }
+            else{
+              for(let i =1;i<10;i++){
+                if(check(r,c,i)==true){
+                    sudoku[r][c]=i;
+                    solve(r,c+1)
+                      sudoku[r][c]=0;
+                    }
+                    
+                    }
+            } 
+                   
+
+                  
+                   
+                
+             
+            
+         
+         return 
+      }
+      solve(0,0);
+      if(flag==true){
+        
+        for(let i =0;i<arr.length;i++){
+          console.log(arr[i])
+        }
+      }
+      else{
+        console.log(-1)
+      }
+       
+    
+      
+  }
+
 
 </script>

@@ -5,9 +5,11 @@ function runProgram(input) {
     var sudoku=[];
     for(let i =0;i<input.length;i++){
         var temp =input[i].trim().split(" ").map(Number);
-        sudoku.push(temp)
+        sudoku.push(temp);
+
     }
-    main(sudoku)
+    main(sudoku);
+  
    
   }
   if (process.env.USER=== "anmolkumar") {
@@ -67,8 +69,9 @@ return true;
            flag =true;
            
           //  console.log(sudoku);
-           for(let i =0;i<sudoku.length;i++){
+           for(let i =0;i<9;i++){
              var temp=sudoku[i].join(" ");
+             console.log(temp);
              arr.push(temp)
            }
             return 
