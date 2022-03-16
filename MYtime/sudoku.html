@@ -141,7 +141,7 @@ td{
        
     </table>
 
-    <button id="btn"onclick=solve() > Solve Sudoku</button>
+    <button id="btn"> Solve Sudoku</button>
 </div>
 <div id="input1"> 
     0 4 0 0 0 0 1 7 9 
@@ -167,12 +167,13 @@ td{
     for(let i =0;i<9;i++){
    var temp =[];
         for(let i =0;i<9;i++){
-       temp.push(input[line++]);
+       temp.push(+input[line++]);
         }
         sudoku.push(temp);
 
     }
     dynmic(sudoku);
+    main(sudoku)
 
    }
   
@@ -180,14 +181,16 @@ td{
     function dynmic(sudoku){
       
         let rows=document.getElementById("sudoku");
+        
 let trs =rows.getElementsByTagName("tr");
 for(let i =0;i<trs.length;i++){
     
     let tds=trs[i].getElementsByTagName("td");
-    console.log(tds)
+    
     for(let j =0;j<tds.length;j++){
-       console.log(typeof(+trs[i].getElementsByTagName("td")[j].innerHTML));
+       
         tds[j].innerHTML = sudoku[i][j];
+        console.log((+trs[i].getElementsByTagName("td")[j].innerHTML));
     }
 }
 
@@ -196,9 +199,8 @@ for(let i =0;i<trs.length;i++){
     
     // (+trs[i].getElementsByTagName("td")[j].innerHTML)
 
-    function  main(){
-        let rows=document.getElementById("sudoku");
-let trs =rows.getElementsByTagName("tr");
+    function  main(sudoku){
+ 
 
       check=(r,c,n)=>{
 for(let i=0;i<9;i++){
