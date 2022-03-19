@@ -1,38 +1,29 @@
 function runProgram(input) {
-    // Write code here;
-   input = input.trim().split("\n");
-  
-    let tc =+input[0];
-    let line =1;
-    for(let i=0; i<tc;i++){
-        let N =+input[line++];
-Hacks(N);
-    }
+    // Write code here
+    input =input.trim().split('\n');
+    let N =+input[0];
+    let arr = input[1].trim().split(" ").map(Number);
+permute(N,arr);
    
   }
-  function Hacks(N){
-    let flag ="No";
-  
-function rec(i){
-if(i === N){
-  flag = "Yes";
-  return ;
+  function permute(N,arr){
+function rec(arr,cur){
+if(cur===arr.length){
+    console.log(...arr);
+    return;
 }
-if(i>N){
-  return ;
+for(let i =cur;i<N;i++){
+    [arr[i],arr[cur]]=[arr[cur],arr[i]];
+    rec(arr,cur+1);
+    [arr[i],arr[cur]]=[arr[cur],arr[i]];
 }
-return rec(i*10)||rec(i*20);
 }
-rec(1);
-console.log(flag);
+rec(arr,0)
+
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`5
-    1
-    2
-    10
-    25
-    200`);
+    runProgram(`3
+    1 2 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -51,7 +42,3 @@ console.log(flag);
       process.exit(0) ;
     });
   }
-
-
-
-  
