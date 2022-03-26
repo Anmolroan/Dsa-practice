@@ -8,7 +8,7 @@ function runProgram(input) {
   }
   function main(N,arr){
       var ma =[];
-      function gs(cur,arr){
+      function gs(cur){
 if(cur===N){
     // console.log(...arr);
     ma.push(arr.join(" "));
@@ -16,8 +16,10 @@ if(cur===N){
 }
 for(let i =cur;i<arr.length;i++){
     [arr[i],arr[cur]]=[arr[cur],arr[i]];
-    gs(cur+1,arr);
+    swap(i,cur)
+    gs(cur+1);
     [arr[i],arr[cur]]=[arr[cur],arr[i]];
+    swap(i,cur)
 }
       }
       gs(0,arr);

@@ -1,11 +1,14 @@
 function runProgram(input) {
     // Write code here
-    var n=+input;
-    fibonacci(n)
+    let [N,M]= input.trim().split(" ").map(Number);
+    main(N,M)
    
   }
+  function main(N,M){
+  console.log(N,M);
+  }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`46`);
+    runProgram(`148 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -23,13 +26,4 @@ function runProgram(input) {
       runProgram(read);
       process.exit(0) ;
     });
-  }
-  function fibonacci(n){
-     function fib(n){
-        if(n==1||n==2){
-            return 1
-        }
-        return fib(n-1)+fib(n-2)
-      }
-      console.log(fib(n))
   }

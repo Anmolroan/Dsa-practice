@@ -5,21 +5,38 @@ function runProgram(input) {
    
   }
   function Strange(N){
-      function rec(cur,newstr){
-          if(newstr.length>=0){
-              console.log(...newstr);
+      let arr =[];
+      for(let i =1;i<=N;i++){
+arr.push(i)
+      };
+      
+      let cur =0;
+      let newarr =[];
+      let mo ={};
+      function rec(cur,newarr){
+          if(newarr.length>=0){
+              
+             mo[newarr]=1;
+             mo[1]=1;
+             mo[[1,2,4]]=1;
+
           }
-          if(cur>N){
+          if(cur===N){
               return;
           }
-          for(let i =cur;i<=N;i++){
-              newstr.push(i);
-              rec(i+1,newstr);
-              newstr.pop();
+          for(let i =cur;i<arr.length;i++){
+            //  Do
+            newarr.push(arr[i]);
+            // recurr
+            rec(i+1,newarr);
+            //Undo
+            newarr.pop();
           }
       }
-      rec(1,[])
-  }
+      rec(cur,newarr);
+      console.log(mo)
+    }
+      
   if (process.env.USER=== "anmolkumar") {
     runProgram(`3`);
   } else {
