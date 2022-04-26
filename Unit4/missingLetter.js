@@ -5,7 +5,7 @@ function runProgram(input) {
   let line =1;
   for(let i =0;i<tc;i++){
       let arr =input[line++].trim().split(" ").map(Number).sort((a,b)=>a-b);
-      main(arr)
+     console.log( main(arr))
       
   }
  
@@ -25,7 +25,7 @@ while(i<=j){
       j=mid-1;
   }
 }
-console.log(miss);
+return miss
 }
 if (process.env.USER=== "anmolkumar") {
   runProgram(`2
