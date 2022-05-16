@@ -1,13 +1,35 @@
 function runProgram(input) {
     // Write code here
-    input=input.trim().split(" ")
-   main(input);
+    input=input.trim().split('\n')
+   let tc =+input[0];
+   let line =1;
+   for(let i=0; i<tc; i++){
+       let N =+input[line++];
+       let matrix =[];
+       for(let j =0;j<N;j++){
+matrix.push(input[line++].trim());
+       }
+       main(matrix);
+   }
   }
-  function main(input) {
-
+  function main(matrix) {
+      
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`A Transformation in education`);
+    runProgram(`3
+    4
+    *.*.
+    .*.*
+    *.*.
+    .*.*
+    3
+    .*.
+    *.*
+    .*.
+    3
+    ..*
+    **.
+    ..*`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
