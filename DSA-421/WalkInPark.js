@@ -4,7 +4,7 @@ function runProgram(input) {
    let tc =+input[0];
    let line =1;
    for(let i =0;i<tc;i++){
-       let [N,M] =input[line++].trim().split(" ").map(Number)
+       let [N,M] =input[line++].trim().split(" ").map(Number);
        let mat =[];
        for(let j =0;j<N;j++){
         let arr = input[line++].trim().split("")
