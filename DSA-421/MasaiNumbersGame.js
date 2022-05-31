@@ -10,30 +10,26 @@ function runProgram(input) {
  main(arr,N);
   }
   function main(arr,N) {
-      let stack = [];
-      let top=-1;
-      let ans = [];
-      let s =[];
-      let t=-1;;
+      var stack = [];
+      var top=-1;
+      var ans = [];
+      
       for(let i =N-1;i>=0;i--){
       
         while(stack.length>0&&stack[top]<=arr[i]){
             stack.pop();
             top--;
         }if(stack.length>0){
-         
-            
-          
-
+         ans.push(stack[top])
         }else{
-           
             ans.push(-1)
         }
        
         stack.push(arr[i]);
         top++;
       }
-      console.log(ans);
+      console.log(ans.join(" "));
+   
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`8
