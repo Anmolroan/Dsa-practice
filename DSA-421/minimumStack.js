@@ -33,20 +33,24 @@ function runProgram(input) {
             }
         }else {
             if(min.length>0){
-                 console.log(min[t])
+                //  console.log(min[t])
             }
            
         }
 
 
     }
+console.log(process.argv)
+if(process.argv[2]==="add"){
+    console.log((+process.argv[3])+(+process.argv[4]))
+}
    
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`8
-    push 5
-    push 3
     push 1
+    push 3
+    push 5
     getMin
     pop
     getMin
