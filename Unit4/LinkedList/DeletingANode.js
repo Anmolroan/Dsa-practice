@@ -9,16 +9,19 @@ const LinkedListNode = class {
 // Complete the function below
 
 function deleteNode(head, position) {
-   let cur =head;
-   let prev;
    let i =0;
+   let cur =head;
+   let prev =cur;
    while(i<position){
-       prev=cur;
-       cur=cur.next;
+       prev =cur;
+       cur =cur.next;
        i++;
    }
-   prev.next=cur.next;
-   cur.next =null;
-   return head;
+if(!cur){
+    return null
+}else{
+    prev.next=cur.next;
+    return head;
+}
 }
 
