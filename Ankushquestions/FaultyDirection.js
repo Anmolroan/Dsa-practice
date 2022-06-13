@@ -5,15 +5,31 @@ function runProgram(input) {
     let tc =+input[0];
     for(let i =0;i<tc;i++){
         let N =+input[line++];
-        let str =input[line++].trim();
+        let str =input[line++].trim().split("");
         main(N,str);
     }
    
   }
   function main(N,str){
-    for(let i=0;i<N;i++){
-        
-    }
+      let r = 0;
+     let c =0;
+     for(let i = 0;i < N;i++){
+         if(str[i]==="R"){
+            c++;
+         }else if(str[i]==="L"){
+             c--;
+         }else if(str[i]==="D"){
+             r++;
+         }else{
+             r--;
+         }
+     }
+   
+   if(r===0&&c===0){
+       console.log("Yes")
+   }else{
+       console.log("No")
+   }
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`2
