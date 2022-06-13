@@ -3,23 +3,47 @@ function runProgram(input) {
     input=input.trim().split('\n');
     let tc =+input[0];
     let line =1;
-    for(let i =0;i<tc;i++){
-        let N =+input[line++];
-        let arr =input[line++].trim().split(" ").map(Number);
-        let l =0;
-        let matrix =[]
-        for(let r =0;r<N;r++){
-            let temp =[]
-            for(let c =0;c<N;c++){
-               temp.push(arr[l++])
-            }
-            matrix.push(temp)
-        }
-        main(matrix,N)
-    }
-   
+   for(let k=0;k<tc;k++){
+       let N =+input[line++];
+       let arr =input[line++].trim().split(" ").map(Number);
+       
+       let count =0;
+       let top=0;
+       let bottom=N-1;
+       let left =0;
+       let right = N-1;
+       let matrix=[];
+       for(let j =0;j<N;j++){
+           let temp =new Array(N).fill(0);
+           matrix.push(temp);
+       }
+     
+       while(count<N*N){
+           for(let i =left;i<=right&&count<N*N;i++){
+            matrix[top][i]=arr[count++]
+           }
+           top++;
+           for(let i =top;i<=bottom&&count<N*N; i++){
+               matrix[i][right]=arr[count++]
+           }
+           right--;
+           for(let i =right;i>=left&&count<N*N;i--){
+               matrix[bottom][i]=arr[count++]
+           }
+           bottom--;
+           for(let i =bottom;i>=top&&count<N*N;i--){
+               matrix[i][left]=arr[count++]
+       }
+       left++
+   }
+   main(matrix,N)
+}
+    
+  
   }
   function main(matrix,N) {
+
+     
       let sum = 0;
       for(let i=0;i<matrix.length;i++){
          
@@ -35,17 +59,13 @@ function runProgram(input) {
           sum =sum-matrix[n][n]
       }
       console.log(sum)
+   
+      
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`4
-    1
-    1
-    2
-    1 2 3 4
-    3
-    1 2 3 4 5 6 7 8 9
+    runProgram(`1
     4
-1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10`);
+    1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
