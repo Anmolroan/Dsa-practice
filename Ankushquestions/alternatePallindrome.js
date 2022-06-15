@@ -1,35 +1,46 @@
 function runProgram(input) {
     // Write code here
     input =input.trim().split('\n');
-    let tc =+input[0];
     let line =1;
-    for(let i=0;i<tc;i++){
-        let N =+input[line++];
-        let arr =input[line++].trim().split(" ").map(Number);
-        main(N,arr);
+    let tc =input[0]
+    for(let i =0;i<tc;i++){
+     let N=+input[line++];
+     let str =input[line++].trim();
+     main(str,N);
     }
    
   }
-  function main(N,arr){
-    let i=0;
-    let j=N-1;
-    let a=0;
-    let b=0;
-   while(i<j){
-  
-   if(arr[i]>arr[j]){
-    arr[i]=arr[j];
+  function main(str,N){
     
-   }
-   }
-   
-   console.log(a,b)
-   
+    let obj={};
+    for(let i=0;i<N;i++){
+        if(!obj[str[i]]){
+            obj[str[i]]=1;
+        }
+        else{
+            obj[str[i]]=obj[str[i]]+1
+        }
+    }
+    let count =0;
+    for(key in obj){
+        if(obj[key]%2!=0){
+            count++;
+        }
+    }
+    if(count>1){
+        console.log("No")
+    }else{
+        console.log("Yes")
+    }
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    6
-    9 2 2 2 2 2`);
+    runProgram(`3
+    1
+    a
+    3
+    aab
+    4
+    abbb`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

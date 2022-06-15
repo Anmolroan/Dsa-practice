@@ -1,35 +1,34 @@
 function runProgram(input) {
     // Write code here
-    input =input.trim().split('\n');
+    input=input.trim().split("\n");
     let tc =+input[0];
     let line =1;
-    for(let i=0;i<tc;i++){
-        let N =+input[line++];
-        let arr =input[line++].trim().split(" ").map(Number);
-        main(N,arr);
+    for(let i =0;i<tc;i++){
+        let str =input[line++].trim().split("");
+    
+        main(str);
     }
    
   }
-  function main(N,arr){
-    let i=0;
-    let j=N-1;
-    let a=0;
-    let b=0;
-   while(i<j){
-  
-   if(arr[i]>arr[j]){
-    arr[i]=arr[j];
-    
-   }
-   }
-   
-   console.log(a,b)
-   
+  function main(str){
+    if(str[0]==="-"){
+        str.shift();
+        str =str.map(Number).sort((a,b)=>b-a).join("");
+        str="-"+(str)
+    }else{
+        str =str.map(Number).sort((a,b)=>a-b).join("");
+        
+    }
+    for(let i =0;i<str.length;i++){
+        
+    }
+    console.log();
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    6
-    9 2 2 2 2 2`);
+    runProgram(`2
+    53334121
+    -1002911
+    `);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
