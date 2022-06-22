@@ -1,18 +1,34 @@
 function runProgram(input) {
     // Write code here
-    input=input.trim().split("\n");
-    let tc =+input[0];
-    let line =1;
-    for(let i =0;i<tc;i++){
-      let N=+input[line++];
-      find(N)
+     input = input.trim().split('\n');
+    let tc=+input[0];
+    let line=1;
+    for(let i=0;i<tc;i++){
+        let [day, month, year]=input[line++].trim().split("/").map(Number);
+       find(day,month,year)
     }
-    
    
   }
+  function find(day,month,year){
+    let monthV=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+    let presY=2022;
+    let presM=6;
+    let presD=22;
+var N=presM;
+    for(let i=1;i<=N;i++){
+        
+    }
+    if(presY>year){
+        let 
+    }
+  }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    4`);
+    runProgram(`3
+    9/2/2025
+    1/2/2017
+    21/2/1989
+    `);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -31,21 +47,3 @@ function runProgram(input) {
       process.exit(0) ;
     });
   }
-  function  find(input){
-      now=(n)=>{
-        if(n<0){
-            return 0;
-
-        }
-        if(n==0){
-            return 1;
-        }
-        return now(n-1)+now(n-2)+now(n-5)
-      }
-      
-      console.log( now(input))
-  }
- 
- 
-
-

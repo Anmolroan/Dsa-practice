@@ -7,27 +7,27 @@ function runProgram(input) {
   }
   function main(N,arr) {
     let max=-Infinity
-    for(let i =0;i<N-1;i++){
+    for(let i =0;i<N;i++){
         if(i==0){
             let diff=arr[i+1]-arr[i];
             let diff2=arr[i+2]-arr[i];
             if(diff>max){max=diff};
             if(diff2>max){max=diff2}
         }else {
-            let diff=arr[i+1]-arr[i];
+          if(arr[i+1]){
+            let diff=arr[i+2]-arr[i];
             if(diff>max){max=diff}
+          }
+           
         }
     }
-    if(arr[N-3]){
-        let diff=arr[N-1]-arr[N-3]
-        if(diff>max){max=diff}
-    }
+  
    
     console.log(max);
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`4
-    5 10 6 8`);
+    runProgram(`7
+    5 10 6 8 12 11 18`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
