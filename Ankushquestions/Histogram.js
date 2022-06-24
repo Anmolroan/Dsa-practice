@@ -38,23 +38,26 @@ var right = [];
         top--;
     }
     if(stack.length>0){
-        right.push(Math.abs(stack[top]-i))
+        right.push(Math.abs(stack[top]-i-1))
     }
     else{
-        right.push(i+1)
+        right.push(N-1-i)
     }
     stack.push(i);
     top++
  }
  right=right.reverse();
-console.log(left,right)
+let max=-Infinity
+for(let i =0;i<arr.length;i++){
+    let prod=(left[i]+right[i])*arr[i];
+    if(prod>max){max=prod}
+}
+console.log(max)
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`2
-    4
-    2 3 4 5
-    6
-    7 5 4 3 6 8`);
+    runProgram(`1
+    40
+    141 356 513 942 796 963 554 453 420 608 25 147 987 544 951 736 861 710 863 104 868 598 956 982 750 256 117 709 705 149 492 359 419 30 553 919 83 338 793 627`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
