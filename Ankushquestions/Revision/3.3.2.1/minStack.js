@@ -14,11 +14,39 @@ function runProgram(input) {
    
   }
   function find(matrix){
-    console.log(matrix);
-    let stack=0;
-    for(let i =0;i<matrix.length;i++){
 
+    let stack=[];
+    let top=-1;
+    let minstack=[];
+    let t=-1;
+    for(let i =0;i<matrix.length;i++){
+        if(matrix[i][0]==="push"){
+            if(stack.length===0){
+                stack.push(+matrix[i][1]);
+                minstack.push(+matrix[i][1]);
+                t++;top++;
+            }
+            else if(+matrix[i][1]<minstack[top]){
+                stack.push(+matrix[i][1]);
+                minstack.push(+matrix[i][1]);
+                t++;
+                top++;
+            }else{
+                stack.push(+matrix[i][1]);
+                minstack.push(minstack[t])
+                t++;
+                top++;
+            }
+        }else if(matrix[i][0]==="pop"){
+            minstack.pop();
+            stack.pop();
+            t--;
+            top--;
+        }else{
+            console.log(minstack[t])
+        }
     }
+    
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`8
