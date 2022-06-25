@@ -1,40 +1,35 @@
 function runProgram(input) {
     // Write code here
-    input =input.trim().split('\n');
-    let line =1;
-    let tc =input[0]
-    for(let i =0;i<tc;i++){
-     let [N,K]=input[line++].trim().split(" ").map(Number);
-     let arr =input[line++].trim().split(" ").map(Number).sort((a,b)=>a-b);
-     main(arr,N,K);
+    input=input.trim().split("\n");
+    var N=+input[0];
+   
+    var matrix=[];
+    for(let i=1;i<=N;i++){
+      var s=input[i].trim().split(" ");
+      matrix.push(s)
+     
+    }
+    
+    find(matrix);
+   
+  }
+  function find(matrix){
+    console.log(matrix);
+    let stack=0;
+    for(let i =0;i<matrix.length;i++){
+
     }
   }
-  function main(arr,N,K){
-let i=N-3;
-let j = N-1;
-let min=null;
-let minimum=0;
-let sum =0;;
-for(let k=i;k<=j;k++){
-sum=sum+arr[k];
-}
-
-min=Math.abs(sum-K);
-minimum=sum;
-// console.log(arr)
-//  console.log(sum);
-while(i>=0){
-if(sum>K){
-j--;
-i++;
-}
-}
-  }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`1
-    6 5
-    -4 1 -5 3 2 -5
-`);
+    runProgram(`8
+    push 5
+    push 3
+    push 1
+    getMin
+    pop
+    getMin
+    pop
+    getMin`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
@@ -53,3 +48,4 @@ i++;
       process.exit(0) ;
     });
   }
+  
