@@ -47,3 +47,17 @@ function meetingPlanner(slotsA, slotsB, dur) {
     }
   return arr
   }
+  // function getCheapestCost(rootNode):
+  //   n = rootNode.numberOfChildren()
+
+  //   if (n == 0):
+  //       return rootNode.cost
+  //   else:
+  //       # initialize minCost to the largest integer in the system
+  //       minCost = MAX_INT
+  //       for i from 0 to n-1:
+  //           tempCost = getCheapestCost(rootNode.child[i])
+  //           if (tempCost < minCost):
+  //               minCost = tempCost
+
+  //   return minCost + rootNode.cost
