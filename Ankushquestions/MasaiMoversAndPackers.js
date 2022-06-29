@@ -1,30 +1,39 @@
 function runProgram(input) {
     // Write code here
    input =input.trim().split('\n');
-   let N =+input[0];
-   let arr1 =input[1].trim().split(" ").map(Number);
-   let arr2 =input[2].trim().split(" ").map(Number);
-   main(N,arr1,arr2)
+   let [K,N]=input[0].trim().split(" ").map(Number);
+   let arr =input[1].trim().split(" ").map(Number);
+  main(K,N,arr);
+
   }
-  function main(N,arr1,arr2) {
-    let i =0;
-    let count=0;
-    while(arr1.length!==i){
-        if(arr1[i]==arr2[i]){
-            arr1.shift();
-            arr2.shift();
-            count++
-        }else{
-            arr1.push(arr1.shift());
-            count++;
+  function main(K,N,arr) {
+    let sum =0;
+    let max =-Infinity;
+    let min =Infinity;
+   
+    let rec =(cur,newarr,K)=>{
+        if(K===0){
+            min = Math.min(min,cur);
+            max=Math.max(max,cur);
+        }
+        if(K<=0){
+        return 
+        }
+        for(let i =0;i<N;i++){
+            rec(cur+1,newarr,K-arr[i]);
         }
     }
-    console.log(count)
+    rec(0,[],K);
+  if(min===Infinity&&max===-Infinity){
+    console.log(-1)}
+else{
+
+    console.log(min+" "+max)}
+
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`3
-    3 2 1
-    1 3 2`);
+    runProgram(`3 3
+    1 2 3`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

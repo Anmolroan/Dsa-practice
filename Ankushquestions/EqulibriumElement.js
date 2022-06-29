@@ -1,30 +1,29 @@
 function runProgram(input) {
     // Write code here
-   input =input.trim().split('\n');
+   input=input.trim().split('\n');
    let N =+input[0];
-   let arr1 =input[1].trim().split(" ").map(Number);
-   let arr2 =input[2].trim().split(" ").map(Number);
-   main(N,arr1,arr2)
+   let arr =input[1].trim().split(" ").map(Number);
+   find(N,arr);
   }
-  function main(N,arr1,arr2) {
-    let i =0;
-    let count=0;
-    while(arr1.length!==i){
-        if(arr1[i]==arr2[i]){
-            arr1.shift();
-            arr2.shift();
-            count++
-        }else{
-            arr1.push(arr1.shift());
-            count++;
+  function find(N,arr) {
+    let sum =arr.reduce((a,b)=>a+b);
+   
+    let prev=arr[0];
+    let flag=-1;
+    for(let i=1;i<N;i++) {
+        let temp =sum-arr[i]-prev;
+        
+        if(temp==prev){
+            flag=i+1;
+            break;
         }
+        prev=prev+arr[i];
     }
-    console.log(count)
+    console.log(flag);
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`3
-    3 2 1
-    1 3 2`);
+    runProgram(`5
+    3 3 5 5 1`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
