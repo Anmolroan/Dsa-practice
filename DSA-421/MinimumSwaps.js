@@ -10,31 +10,37 @@ function runProgram(input) {
    }
   }
   function main(arr,N){
-      let i =0;
-      let j =1;
+    
+      let flag=true;
       let count =0;
-      let flag=false;
-      while(j<N){
-          if(arr[i]===arr[j]){
-              i++;
-              j++;
-          }else {
-            let temp =arr[i];
-            arr[i]=arr[j];
-            arr[j]=temp;
-            count++;
-            // console.log(arr.join("")===arr.reverse().join(""))
-            if(arr.join("")===arr.reverse().join("")){
-                flag=true;
-               
-            }
-            i++;j++;
-            break;
-          }
-         
-          
+    for(let i=0;i<Math.floor(N/2);i++){
+      let l=i;
+      let r =N-i-1;
+      while(l<r){
+        
+        if(arr[l]===arr[r])
+        {
+          break;
+        }else{
+          r--;
+        }
       }
-      console.log(flag)
+      if(l===r){
+        flag=false;
+        break;
+      }
+      for(let j=r;j<N-i-1;j++){
+         let temp=arr[j];
+         arr[j]=arr[j+1];
+         arr[j+1]=temp;
+         count++;
+      }
+    }
+    if(flag){
+      console.log(count)
+    }else{
+      console.log(-1)
+    }
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`2
