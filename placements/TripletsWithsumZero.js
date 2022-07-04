@@ -8,6 +8,12 @@ function runProgram(input) {
     let j=i+1;
     let k =j+1;
     while(i<j&&j<k&&i<N-2&&j<N-1&&k<N){
+        if(i===j){
+            j++;
+        }
+        if(j===k){
+            k++;
+        }
         let sum =arr[i]+arr[j]+arr[k];
         console.log(sum)
         if(sum<0){
@@ -23,14 +29,13 @@ function runProgram(input) {
                     }
                 }
             }
-        }else if(sum===0){
+        }else if(sum>=0){
             count++;
+            i++;
           
         }
             
-        else{
-            break;
-        }
+       
     }
    console.log(count);
   }
