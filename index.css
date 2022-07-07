@@ -1,0 +1,14 @@
+.samecolor{
+    color:red
+}
+#body{
+    display:grid;
+    grid-template-columns: repeat(3,30%);
+    /* grid-template-rows: repeat(3,100px); */
+    gap: 3%;
+}
+div{
+    color:rgb(226, 24, 24);
+    border:1px solid;
+    width:10%;
+}
