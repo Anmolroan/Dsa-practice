@@ -24,7 +24,7 @@ function runProgram(input) {
             ans.push(i+1)
         }
         stack.push(i);
-        top++
+        top+
     }
 console.log(ans.join(" "))
   }

@@ -18,8 +18,8 @@ function runProgram(input) {
             stack.push(arr[i]);
             top++;
         }else if(arr[i]===")"||arr[i]=="}"||arr[i]==']'){
-            console.log(arr[i],stack[top])
-            if(arr[i]+stack[top]==="[]"||arr[i]+stack[top]==='{}'||arr[i]+stack[top]==='()'){
+          
+            if(stack[top]+arr[i]==="[]"||stack[top]+arr[i]==='{}'||stack[top]+arr[i]==='()'){
                 stack.pop();
                 top--;
             }else{
@@ -28,7 +28,7 @@ function runProgram(input) {
         }
         
     }
-    console.log(stack)
+   
     if(stack.length>0||!flag){
         console.log("unbalanced")
     }else{
@@ -36,7 +36,7 @@ function runProgram(input) {
     }
   }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`{(([])[])[]]} `);
+    runProgram(`(((((((((())))))))))]`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
