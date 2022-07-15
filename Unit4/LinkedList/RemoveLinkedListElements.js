@@ -15,27 +15,25 @@ let temp =new LinkedListNode(arr[i]);
     i++;
 };
 var removeElements = function(head, val) {
+   
     let cur =head;
-    if(cur.val===val){
-        cur=cur.next;
-        head=cur;
-    }
-   let prev=cur;
-    while(cur.next!=null){
-        prev=cur
-        cur=cur.next;
-        if(cur.val===val){
-           prev.next=cur.next;
+    let list =null;
+    let cur2=list;
+    while(cur!=null){
+        if(cur.val!=val){
+            if(list===null){
+                list=new LinkedListNode(cur.val);
+                 cur2=list;
+            }else{
+                let temp =new LinkedListNode(cur.val);
+                cur2.next=temp;
+                cur2=cur2.next
+            }
+            
             
         }
-         
-        
-        
+        cur=cur.next;
     }
-    // if(cur.val===val){
-    //     cur=cur.next;
-    
-    // }
-    return head
+    return list
 };
 console.log(removeElements(head,6))
