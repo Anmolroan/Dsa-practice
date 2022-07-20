@@ -13,17 +13,39 @@ function runProgram(input) {
     while(i<=j){
        let mid =i+Math.floor((j-i)/2);
        if(arr[mid]<=k){
+        if(arr[mid]===k){
+            upperbound=mid;
+        }
         i=mid+1;
        }else{
-        upperbound=mid;
+       
         j=mid-1;
        }
     }
-console.log(upperbound);
+    let lowerbound=-1;
+    let l =0;
+    let r=N-1;
+    while(l<=r){
+        let mid =l+Math.floor((r-l)/2);
+        if(arr[mid]<k){
+            l=mid+1;
+        }else{
+            if(arr[mid]===k){
+                lowerbound=mid;
+            }
+            r=mid-1;
+        }
+    }
+
+if(upperbound===-1||lowerbound==-1){
+    console.log(-1)
+}else{
+    console.log(upperbound-lowerbound+1)
+}
  }
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`10 10
-    0 2 4 4 5 5 7 7 9 10`);
+    runProgram(`6 3
+    2 3 3 3 6 9`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
