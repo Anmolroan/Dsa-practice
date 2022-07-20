@@ -17,6 +17,41 @@ function runProgram(input) {
             return 
         }
     }
+    mergeSort(0,N-1)
+    console.log(arr)
+    function merge(l,mid,r,arr){
+      let i =l;
+      let j =mid+1;
+      let k =l;
+      let temp=[];
+      while(i<=mid&&j<=r){
+        if(arr[i]<=arr[j]){
+          temp[k]=arr[j];
+          j++;
+        }else{
+          temp[k]=arr[i];
+          i++;
+        }
+        k++;
+      }
+      if(i<=mid){
+        while(i<=mid){
+          temp[k]=arr[i];
+          k++;
+          i++;
+        }
+      }
+      if(j<=r){
+        while(j<=r){
+          temp[k]=arr[j];
+          k++;
+          j++;
+        }
+      }
+      for(let i =l;i<=r;i++){
+        arr[i]=temp[i];
+      }
+    }
   }
   if (process.env.USER=== "anmolkumar") {
     runProgram(`5
