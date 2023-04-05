@@ -3,8 +3,13 @@ function runProgram(input) {
     input =input.trim().split('\n');
     let N =+input[0];
     let line =1;
-    for(let i =0;i<N;i++){
-        main(input[line++].trim())
+    for(let i =0;i<N;i++){;
+      let arr = input[line++].trim().split("").filter((el)=>{
+        if(el==="(" ||el===")" || el==="{" || el==="}" || el==="[" || el==="]"){
+          return el;
+        }
+      })
+        main(arr)
     }
    
   }
@@ -51,10 +56,8 @@ function runProgram(input) {
 
 
   if (process.env.USER=== "anmolkumar") {
-    runProgram(`3
-    {([])}
-    ()
-    ([]`);
+    runProgram(`1
+    (((((((((())))))))))`);
   } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");
